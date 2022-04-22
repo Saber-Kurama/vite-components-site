@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "declarationDir": "dist",
+    "lib": ["ESNext", "DOM"],
+    "target": "ES6",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "sourceMap": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "removeComments": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@idux": ["./packages"],
+      "@idux/*": ["./packages/*"],
+      "@tests": ["./tests"],
+      "@tests/*": ["./tests/*"]
+    },
+    "types": ["vitest/globals"]
+  },
+  "exclude": ["node_modules", "dist"]
+}
