@@ -27,7 +27,7 @@ export default defineConfig(({ command }) => {
         // { find: '@idux/cdk', replacement: resolve(__dirname, '../cdk') },
         // { find: '@idux/components', replacement: resolve(__dirname, '../components') },
         // { find: '@idux/pro', replacement: resolve(__dirname, '../pro') },
-        // { find: '@idux/site', replacement: resolve(__dirname, './src') },
+        { find: '@idux/site', replacement: resolve(__dirname, './src') },
       ],
     },
     define: {

@@ -8,5 +8,6 @@ export const routes: RouteRecordRaw[] = [
     {path: '/docs/global-config/zh', 'component': () => import('./docs/GlobalConfig.zh.md')},
     {path: '/docs/i18n/zh', 'component': () => import('./docs/I18n.zh.md')},
     {path: '/docs/introduce/zh', 'component': () => import('./docs/Introduce.zh.md')},
+    {path: '/components/a-page-container', 'component': () => import('./button/docs/Index.zh.md')},
     {path: '/:pathMatch(.*)*', redirect: '/'},
 ];

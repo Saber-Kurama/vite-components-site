@@ -6,7 +6,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import IduxInstall from './iduxInstall'
 import App from './App.vue'
 
-// eslint-disable-next-line import/no-unassigned-import
+
+
 import './index.less'
 
 import { routes } from './router'

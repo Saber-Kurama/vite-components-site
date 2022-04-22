@@ -5,6 +5,7 @@
     "declarationDir": "dist",
     "lib": ["ESNext", "DOM"],
     "target": "ES6",
+    "module": "ES2020",
     "moduleResolution": "node",
     "jsx": "preserve",
     "jsxFactory": "h",
@@ -23,10 +24,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@idux": ["./packages"],
-      "@idux/*": ["./packages/*"],
-      "@tests": ["./tests"],
-      "@tests/*": ["./tests/*"]
+      
     },
     "types": ["vitest/globals"]
   },
