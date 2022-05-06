@@ -63,7 +63,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { Message } from '@web-vue/components/index';
+import { Message } from '@arco-design/web-vue';
 import joinChat from '../../utils/join-chart';
 import IconArco from '../../assets/footer/arco.svg';
 import IconArcoColor from '../../assets/footer/arco-color.svg';

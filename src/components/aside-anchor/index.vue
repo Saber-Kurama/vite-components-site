@@ -29,7 +29,7 @@
 <script lang="ts">
 import { computed, defineComponent, inject, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import anchor from '@web-vue/components/anchor/anchor.vue';
+// import { Anchor } from '@arco-design/web-vue';
 
 export default defineComponent({
   name: 'AsideAnchor',

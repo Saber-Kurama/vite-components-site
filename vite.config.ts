@@ -30,9 +30,13 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: /^@web-vue\/(.*)/,
-        replacement: path.resolve(root, '../web-vue/$1'),
-      },
+        find: /^@arco-design\/arco-vue-docs-navbar/,
+        replacement: path.resolve(root, './libs/arco-vue-docs-navbar'),
+      }
+      // {
+      //   find: /^@web-vue\/(.*)/,
+      //   replacement: path.resolve(root, '../web-vue/$1'),
+      // },
     ],
   },
   plugins: [

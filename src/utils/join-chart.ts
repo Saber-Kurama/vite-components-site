@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Message } from '@web-vue/components/index';
+import { Message } from '@arco-design/web-vue';
 
 export default function joinChat() {
   if (!window.user) {

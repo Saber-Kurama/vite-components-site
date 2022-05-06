@@ -1,10 +1,13 @@
+
 import { createApp } from 'vue';
 import { createI18n } from 'vue-i18n';
-import ArcoVue, { addI18nMessages, useLocale } from '@web-vue/components/index';
-import ArcoVueIcon from '@web-vue/components/icon';
-import enUS from '@web-vue/components/locale/lang/en-us';
-import renderNavBar from '@arco-design/arco-vue-docs-navbar';
-import packages from '@web-vue/package.json';
+import ArcoVue, { addI18nMessages, useLocale } from '@arco-design/web-vue';
+import ArcoVueIcon from '@arco-design/web-vue/es/icon';
+// import enUS from '@web-vue/components/locale/lang/en-us';
+import packages from '@arco-design/web-vue/package.json';
+// @ts-ignore
+// eslint-disable-next-line import/no-unresolved
+// import renderNavBar from '@arco-design/arco-vue-docs-navbar';
 import router from './router';
 import locale from './locale';
 import App from './app.vue';
@@ -15,8 +18,8 @@ import CellDemo from './components/cell-demo/index.vue';
 import CellCode from './components/cell-code/index.vue';
 import 'prismjs/themes/prism.css';
 import 'nprogress/nprogress.css';
-import '@web-vue/components/index.less';
-import '@arco-design/arco-vue-docs-navbar/dist/style.css';
+// import '@web-vue/components/index.less';
+// import '@arco-design/arco-vue-docs-navbar/dist/style.css';
 import { getLocalStorage, setLocalStorage } from './utils/local-storage';
 import { checkLogin } from './utils/login';
 
@@ -25,15 +28,16 @@ if (!theme) {
   theme = 'light';
   setLocalStorage('arco-theme', theme);
 }
-const lang = /en-US/i.test(window.location.href) ? 'en-US' : 'zh-CN';
-setLocalStorage('arco-lang', lang);
+// const lang = /en-US/i.test(window.location.href) ? 'en-US' : 'zh-CN';
+const lang = 'zh-CN';
+// setLocalStorage('arco-lang', lang);
 
 const handleLanguageChange = (lang: string) => {
   if (lang === 'zh-CN' && /en-US/i.test(window.location.href)) {
-    setLocalStorage('arco-lang', lang);
+    // setLocalStorage('arco-lang', lang);
     window.location.href = window.location.href.replace(/en-US\//i, '');
   } else if (lang === 'en-US' && !/en-US/i.test(window.location.href)) {
-    setLocalStorage('arco-lang', lang);
+    // setLocalStorage('arco-lang', lang);
     window.location.href = window.location.href.replace('/vue', '/vue/en-US');
   }
 };
@@ -42,16 +46,16 @@ const handleLanguageChange = (lang: string) => {
 handleLanguageChange(lang);
 
 checkLogin().then(() => {
-  try {
-    renderNavBar({
-      version: packages.version,
-      lang,
-      handleLanguageChange,
-    });
-  } catch (e) {
-    // eslint-disable-next-line no-console
-    console.error(e);
-  }
+  // try {
+  //   renderNavBar({
+  //     version: packages.version,
+  //     lang,
+  //     handleLanguageChange,
+  //   });
+  // } catch (e) {
+  //   // eslint-disable-next-line no-console
+  //   console.error(e);
+  // }
 
   const i18n = createI18n({
     legacy: false,
@@ -60,11 +64,11 @@ checkLogin().then(() => {
     messages: locale,
   });
 
-  addI18nMessages({ 'en-US': enUS });
+  // addI18nMessages({ 'en-US': enUS });
 
-  if (lang === 'en-US') {
-    useLocale(lang);
-  }
+  // if (lang === 'en-US') {
+  //   useLocale(lang);
+  // }
 
   const app = createApp(App, {
     theme,
@@ -79,5 +83,5 @@ checkLogin().then(() => {
   app.component(CellCode.name, CellCode);
   app.component(AnchorHead.name, AnchorHead);
   app.component(ArcoArticle.name, ArcoArticle);
-  app.mount('#root');
+  app.mount('#app');
 });

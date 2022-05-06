@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Message } from '@web-vue/components/index';
+import { Message } from '@arco-design/web-vue';
 import copy from '../../utils/clipboard';
 
 export default defineComponent({

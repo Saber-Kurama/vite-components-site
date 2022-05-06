@@ -48,7 +48,7 @@
 <script lang="ts">
 import { computed, CSSProperties, defineComponent, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { Message } from '@web-vue/components/index';
+import { Message } from '@arco-design/web-vue';
 import copy from '../../utils/clipboard';
 import { openCodeSandbox } from '../../utils/code-sandbox';
 
