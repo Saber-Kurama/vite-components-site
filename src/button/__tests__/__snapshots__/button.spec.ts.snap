@@ -1,3 +1,0 @@
-// Vitest Snapshot v1
-
-exports[`Button > render work 1`] = `"<button class=\\"ix-button ix-button-md\\" type=\\"button\\"></button>"`;

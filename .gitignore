@@ -3,3 +3,13 @@ node_modules
 node_modules
 dist
 dist-ssr
+
+.idea/
+.vscode/
+
+node_modules/
+**/.DS_Store
+
+dist/
+
+index.zip

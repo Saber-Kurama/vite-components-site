@@ -1,49 +1,50 @@
-import { resolve } from 'path'
+import path from 'path';
+import { defineConfig, InlineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import vueDocs from '@arco-design/vite-plugin-arco-vue-docs';
+import svgLoader from 'vite-svg-loader';
+import eslint from 'vite-plugin-eslint';
+import paths from './paths';
 
-import vuePlugin from '@vitejs/plugin-vue'
-import vueJsxPlugin from '@vitejs/plugin-vue-jsx'
-import Components from 'unplugin-vue-components/vite'
-import { defineConfig } from 'vite'
+const root = process.cwd();
 
-import { mdPlugin } from './plugins/mdPlugin'
-import { transformIndexPlugin } from './plugins/transformIndexPlugin'
-
-export default defineConfig(({ command }) => {
-  const isBuild = command === 'build'
-
-  return {
-    plugins: [
-      vuePlugin({ include: [/\.vue$/, /\.md$/] }),
-      vueJsxPlugin({ enableObjectSlots: false }),
-      mdPlugin(),
-      Components({
-        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-        dts: true,
-      }),
-      transformIndexPlugin(),
-    ],
-    resolve: {
-      alias: [
-        // { find: '@idux/cdk', replacement: resolve(__dirname, '../cdk') },
-        // { find: '@idux/components', replacement: resolve(__dirname, '../components') },
-        // { find: '@idux/pro', replacement: resolve(__dirname, '../pro') },
-        { find: '@idux/site', replacement: resolve(__dirname, './src') },
-      ],
+export default defineConfig({
+  mode: 'development',
+  server: {
+    open: true,
+    host: '0.0.0.0',
+    port: 2233,
+    fs: {
+      strict: true,
+      allow: ['..'],
     },
-    define: {
-      __DEV__: !isBuild,
-    },
-    css: {
-      preprocessorOptions: {
-        less: {
-          javascriptEnabled: true,
-          additionalData: `@import '@idux/components/style/variable/index.less';`,
-        },
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        paths: [paths.resolvePath('../web-vue')],
       },
     },
-    build: {
-      outDir: resolve(__dirname, '../../dist/site'),
-      emptyOutDir: true,
-    },
-  }
-})
+  },
+  resolve: {
+    alias: [
+      {
+        find: /^@web-vue\/(.*)/,
+        replacement: path.resolve(root, '../web-vue/$1'),
+      },
+    ],
+  },
+  plugins: [
+    vueDocs(),
+    vue(),
+    vueJsx(),
+    svgLoader({ svgoConfig: {} }),
+    eslint({
+      // hmr情况下cache存在问题
+      cache: false,
+      include: ['**/*.ts', '**/*.tsx', '**/*.vue'],
+      exclude: ['node_modules', '**/components/icon/**/*'],
+    }),
+  ],
+}) as InlineConfig;

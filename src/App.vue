@@ -1,99 +1,140 @@
 <template>
-  <IxDrawerProvider ref="drawerProviderRef">
-    <IxModalProvider ref="modalProviderRef">
-      <IxNotificationProvider>
-        <IxMessageProvider>
-          <div class="root-wrapper">
-            <LayoutHeader></LayoutHeader>
-            <div v-if="page !== 'home'" class="main-wrapper">
-              <IxRow>
-                <IxCol xs="0" sm="7" md="6" lg="5" xl="4" class="main-menu">
-                  <IxAffix v-if="!breakpoints.xs">
-                    <LayoutSider class="side-nav"></LayoutSider>
-                  </IxAffix>
-                  <IxDropdown v-else>
-                    <IxIcon name="menu"></IxIcon>
-                    <template #overlay>
-                      <LayoutHeaderNavigation />
-                    </template>
-                  </IxDropdown>
-                </IxCol>
-                <IxCol xs="24" sm="17" md="18" lg="19" xl="20" class="main-content">
-                  <router-view></router-view>
-                </IxCol>
-                <IxCol
-                  xs="24"
-                  :sm="{ span: 17, offset: 7 }"
-                  :md="{ span: 18, offset: 6 }"
-                  :lg="{ span: 19, offset: 5 }"
-                  :xl="{ span: 20, offset: 4 }"
-                >
-                  <LayoutFooter></LayoutFooter>
-                </IxCol>
-              </IxRow>
-            </div>
-            <template v-else>
-              <router-view></router-view>
-            </template>
-          </div>
-          <div v-if="page !== 'home' && breakpoints.xs" class="root-drawer">
-            <div class="root-drawer-handle" @click="isDrawerOpen = !isDrawerOpen">
-              <IxIcon name="menu-fold"></IxIcon>
-            </div>
-            <IxDrawer
-              v-model:visible="isDrawerOpen"
-              class="root-drawer"
-              :closable="false"
-              placement="start"
-              :width="200"
-            >
-              <LayoutSider></LayoutSider>
-            </IxDrawer>
-          </div>
-        </IxMessageProvider>
-      </IxNotificationProvider>
-    </IxModalProvider>
-  </IxDrawerProvider>
+  <div class="arco-vue-site">
+    <div
+      :class="[
+        'arco-vue-body',
+        { 'arco-vue-body-has-notice': showGlobalNotice },
+      ]"
+    >
+      <a-alert
+        v-if="showGlobalNotice"
+        class="site-global-notice"
+        :show-icon="false"
+        closable
+        banner
+        @close="handleCloseGlobalNotice"
+      >
+        <a
+          href="https://mp.weixin.qq.com/s/06ALEmhxJcUqBGIVL4IQvA"
+          rel="Arco Global Notice noreferrer"
+          target="_blank"
+        >
+          <span class="content">
+            Vue3 将成为默认版本，Arco 助力开发者轻装启航
+          </span>
+          <b>
+            查看更多
+            <icon-right />
+          </b>
+        </a>
+      </a-alert>
+      <aside-nav :show="showNav" @button-click="toggleNav" />
+      <router-view />
+    </div>
+    <ThemeBox />
+    <a-back-top :style="{ right: '70px', bottom: '80px' }">
+      <a-button class="site-backtop-btn" shape="circle" size="large">
+        <icon-up />
+      </a-button>
+    </a-back-top>
+  </div>
 </template>
 
-<script setup lang="ts">
-import { computed, provide, ref } from 'vue'
+<script lang="ts">
+import {
+  defineComponent,
+  provide,
+  reactive,
+  ref,
+  watch,
+  onMounted,
+  onBeforeUnmount,
+} from 'vue';
+import { useRoute } from 'vue-router';
+import { PageDurationTracker, teaLog } from '@arco-design/arco-site-utils';
+import { collapseInjectionKey } from './context';
+import AsideNav from './components/aside-nav/index.vue';
+import { getLocalStorage, setLocalStorage } from './utils/local-storage';
+import ThemeBox from './components/theme-box/index.vue';
+// import Locale from '@arco-design/web-vue/es/locale';
+// import { getLocalStorage, setLocalStorage } from './utils/local-storage';
 
-import { useRoute, useRouter } from 'vue-router'
+export default defineComponent({
+  name: 'App',
+  components: {
+    AsideNav,
+    ThemeBox,
+  },
+  props: {
+    theme: String,
+    language: String,
+  },
+  emits: ['themeChange', 'languageChange'],
+  setup() {
+    const showNav = ref(true);
+    const showAnchor = ref(true);
+    const showGlobalNotice = ref(
+      getLocalStorage('arco-global-notice') !== '3-vue'
+    );
 
-import { useSharedBreakpoints } from '@idux/cdk/breakpoint'
-import { DrawerProviderInstance } from '@idux/components/drawer'
-import { ModalProviderInstance } from '@idux/components/modal'
+    const handleCloseGlobalNotice = () => {
+      showGlobalNotice.value = false;
+      setLocalStorage('arco-global-notice', '3-vue');
+    };
 
-import { AppContext, appContextToken } from './context'
+    const toggleNav = () => {
+      showNav.value = !showNav.value;
+    };
 
-const drawerProviderRef = ref<DrawerProviderInstance>()
-const modalProviderRef = ref<ModalProviderInstance>()
+    const toggleAnchor = () => {
+      showAnchor.value = !showAnchor.value;
+    };
 
-const router = useRouter()
-router.afterEach(() => {
-  drawerProviderRef.value?.destroyAll()
-  modalProviderRef.value?.destroyAll()
-})
+    provide(
+      collapseInjectionKey,
+      reactive({
+        showNav,
+        showAnchor,
+        toggleNav,
+        toggleAnchor,
+      })
+    );
 
-const route = useRoute()
-const path = computed(() => route.path)
-const page = computed(() => {
-  const match = route.path.match(/\/(\w+)/)
-  return match?.[1] ?? 'home'
-})
+    // provide('toggleTheme', toggleTheme);
+    // provide('lang', lang);
+    // locale.value = lang.value;
+    // provide('changeLanguage', changeLanguage);
 
-const breakpoints = useSharedBreakpoints()
-const isDrawerOpen = ref(false)
+    const route = useRoute();
+    let tracker: PageDurationTracker;
+    let originPath = route.path;
 
-const appContext: AppContext = {
-  org: 'IDuxFE',
-  repo: 'components',
-  lang: ref('zh'),
-  path,
-  page,
-  breakpoints,
-}
+    onMounted(() => {
+      tracker = new PageDurationTracker((params) => {
+        teaLog('page_view', { ...params, url_path: originPath });
+      });
+    });
 
-provide(appContextToken, appContext)
+    onBeforeUnmount(() => {
+      tracker = null;
+    });
+
+    watch(
+      () => route.path,
+      (path, prePath) => {
+        originPath = prePath;
+        tracker.handleReport();
+      }
+    );
+
+    return {
+      showNav,
+      toggleNav,
+      showGlobalNotice,
+      handleCloseGlobalNotice,
+    };
+  },
+});
 </script>
+
+<style lang="less" src="./style/index.less" />

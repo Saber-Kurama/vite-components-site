@@ -1,16 +1,11 @@
-import { ComputedRef, InjectionKey, Ref } from 'vue'
+import { InjectionKey } from 'vue';
 
-import { BreakpointKey } from '@idux/cdk/breakpoint'
-
-export const isDevMode = process.env.NODE_ENV !== 'production'
-
-export interface AppContext {
-  org: string
-  repo: string
-  lang: Ref<'zh' | 'en'>
-  path: ComputedRef<string>
-  page: ComputedRef<string>
-  breakpoints: Record<BreakpointKey, boolean>
+export interface CollapseContext {
+  showNav: boolean;
+  showAnchor: boolean;
+  toggleNav: () => void;
+  toggleAnchor: () => void;
 }
 
-export const appContextToken: InjectionKey<AppContext> = Symbol('appContextToken')
+export const collapseInjectionKey: InjectionKey<CollapseContext> =
+  Symbol('CollapseContext');
