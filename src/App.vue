@@ -1,5 +1,6 @@
 <template>
   <div class="arco-vue-site">
+    <PortalNavbar />
     <div
       :class="[
         'arco-vue-body',
@@ -53,7 +54,9 @@ import {
 import { useRoute } from 'vue-router';
 import { PageDurationTracker, teaLog } from '@arco-design/arco-site-utils';
 import { collapseInjectionKey } from './context';
+// @ts-ignore
 import AsideNav from './components/aside-nav/index.vue';
+import PortalNavbar from './components/portal-navbar/index.vue';
 import { getLocalStorage, setLocalStorage } from './utils/local-storage';
 import ThemeBox from './components/theme-box/index.vue';
 // import Locale from '@arco-design/web-vue/es/locale';
@@ -64,6 +67,7 @@ export default defineComponent({
   components: {
     AsideNav,
     ThemeBox,
+    PortalNavbar,
   },
   props: {
     theme: String,

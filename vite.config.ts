@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import vueDocs from '@arco-design/vite-plugin-arco-vue-docs';
 import svgLoader from 'vite-svg-loader';
+import configStyleImportPlugin from './config/plugin/styleImport';
 import eslint from 'vite-plugin-eslint';
 import paths from './paths';
 
@@ -50,5 +51,6 @@ export default defineConfig({
       include: ['**/*.ts', '**/*.tsx', '**/*.vue'],
       exclude: ['node_modules', '**/components/icon/**/*'],
     }),
+    configStyleImportPlugin(),
   ],
 }) as InlineConfig;

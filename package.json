@@ -1,5 +1,5 @@
 {
-  "name": "@arco-design/arco-vue-docs",
+  "name": "vite-components-site",
   "version": "1.0.0",
   "private": true,
   "description": "Arco Design Vue 2.0 Docs",
@@ -7,6 +7,7 @@
   "homepage": "https://arco.design/vue",
   "license": "MIT",
   "scripts": {
+    "bootstrap:dev": "cross-env NODE_ENV=development pnpm install",
     "start": "vite",
     "build": "arco-vue-scripts build:site",
     "lint-staged": "npx lint-staged"
@@ -24,12 +25,15 @@
   "devDependencies": {
     "@arco-design/arco-vue-scripts": "^0.2.9",
     "@arco-design/web-vue": "^2.26.0",
+    "@dangojs/portal-navbar": "^0.0.1",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
     "axios": "^0.27.2",
     "clipboard": "^2.0.11",
     "codesandbox": "^2.2.3",
+    "consola": "^2.15.3",
+    "cross-env": "^7.0.3",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -46,6 +50,10 @@
     "stylelint-order": "^5.0.0",
     "typescript": "^4.6.4",
     "vite": "^2.9.8",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-eslint": "^1.3.0",
+    "vite-plugin-style-import": "^2.0.0",
+    "vite-svg-loader": "^3.1.0",
     "vue": "^3.2.33",
     "vue-i18n": "^9.1.10",
     "vue-router": "^4.0.15"
