@@ -25,7 +25,7 @@
         <slot />
       </div>
     </article>
-    <arco-footer />
+    <!-- <arco-footer /> -->
   </main>
 </template>
 
@@ -40,7 +40,7 @@ import {
 } from 'vue';
 import { useI18n } from 'vue-i18n';
 import AsideAnchor from '../aside-anchor/index.vue';
-import ArcoFooter from '../footer/index.vue';
+// import ArcoFooter from '../footer/index.vue';
 import { CollapseContext, collapseInjectionKey } from '../../context';
 import { articleInjectionKey } from './context';
 import { AnchorData } from '../aside-anchor/interface';
@@ -51,7 +51,7 @@ export default defineComponent({
   components: {
     ChangelogBox,
     AsideAnchor,
-    ArcoFooter,
+    // ArcoFooter,
   },
   props: {
     title: String,

@@ -6,7 +6,7 @@
         { 'arco-vue-body-has-notice': showGlobalNotice },
       ]"
     >
-      <a-alert
+      <!-- <a-alert
         v-if="showGlobalNotice"
         class="site-global-notice"
         :show-icon="false"
@@ -27,7 +27,7 @@
             <icon-right />
           </b>
         </a>
-      </a-alert>
+      </a-alert> -->
       <aside-nav :show="showNav" @button-click="toggleNav" />
       <router-view />
     </div>
