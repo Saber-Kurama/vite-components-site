@@ -78,19 +78,31 @@ const menusData = [
     resourceCode: '1',
     resourceIcon: '#icon-xuanpinpeizhi',
     resourceLink: '/assortment-setting',
-    resourceName: '一级菜单',
+    resourceName: '文档',
   },
   {
     resourceCode: '2',
     resourceIcon: '#icon-xuanpinpeizhi',
     resourceLink: '/assortment-setting',
-    resourceName: '一级菜单',
+    resourceName: '高级组件',
   },
   {
     resourceCode: '3',
     resourceIcon: '#icon-xuanpinpeizhi',
     resourceLink: '/assortment-setting',
-    resourceName: '一级菜单',
+    resourceName: '组件生态',
+  },
+  {
+    resourceCode: '4',
+    resourceIcon: '#icon-xuanpinpeizhi',
+    resourceLink: '/assortment-setting',
+    resourceName: '开发套件',
+  },
+  {
+    resourceCode: '5',
+    resourceIcon: '#icon-xuanpinpeizhi',
+    resourceLink: '/assortment-setting',
+    resourceName: '解决方案',
   },
 ];
 const tenantOptionsData = [
