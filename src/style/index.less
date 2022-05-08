@@ -5,6 +5,10 @@
   color: var(--color-text-2);
   font-size: 14px;
   background-color: var(--color-bg-1);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   h1,
   h2,
@@ -14,9 +18,11 @@
     font-weight: 500;
   }
 
-  // .arco-vue-body {
-  //   padding-top: 61px;
-  // }
+  .arco-vue-body {
+    // padding-top: 61px;
+    flex: 1;
+    overflow-y: auto;
+  }
 
   .site-backtop-btn {
     background: var(--color-bg-5) !important;

@@ -52,7 +52,7 @@ import {
   onBeforeUnmount,
 } from 'vue';
 import { useRoute } from 'vue-router';
-import { PageDurationTracker, teaLog } from '@arco-design/arco-site-utils';
+// import { PageDurationTracker, teaLog } from '@arco-design/arco-site-utils';
 import { collapseInjectionKey } from './context';
 // @ts-ignore
 import AsideNav from './components/aside-nav/index.vue';
@@ -110,24 +110,24 @@ export default defineComponent({
     // provide('changeLanguage', changeLanguage);
 
     const route = useRoute();
-    let tracker: PageDurationTracker;
+    // let tracker: PageDurationTracker;
     let originPath = route.path;
 
     onMounted(() => {
-      tracker = new PageDurationTracker((params) => {
-        teaLog('page_view', { ...params, url_path: originPath });
-      });
+      // tracker = new PageDurationTracker((params) => {
+      //   teaLog('page_view', { ...params, url_path: originPath });
+      // });
     });
 
     onBeforeUnmount(() => {
-      tracker = null;
+      // tracker = null;
     });
 
     watch(
       () => route.path,
       (path, prePath) => {
         originPath = prePath;
-        tracker.handleReport();
+        // tracker.handleReport();
       }
     );
 

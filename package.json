@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@arco-design/arco-vue-scripts": "^0.2.9",
+    "@arco-design/vite-plugin-arco-vue-docs": "^0.1.0",
     "@arco-design/web-vue": "^2.26.0",
     "@dangojs/portal-navbar": "^0.0.1",
     "@types/nprogress": "^0.2.0",

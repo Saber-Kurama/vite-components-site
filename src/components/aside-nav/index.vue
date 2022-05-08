@@ -8,7 +8,7 @@
       <!-- <div class="aside-nav-header">
       </div> -->
       <div v-show="showNav" class="aside-nav-body">
-        <template v-for="group in docsMenuList" :key="group.name">
+        <!-- <template v-for="group in docsMenuList" :key="group.name">
           <div class="aside-nav-group">
             <div class="aside-nav-group-name">{{
               t(`${group.name}.name`)
@@ -44,10 +44,10 @@
               </router-link>
             </ul>
           </div>
-        </template>
+        </template> -->
 
         <div class="aside-nav-group">
-          <div class="aside-nav-group-name">{{ t('component.name') }}</div>
+          <!-- <div class="aside-nav-group-name">{{ t('component.name') }}</div> -->
           <div
             v-for="group of componentMenu"
             :key="group.name"

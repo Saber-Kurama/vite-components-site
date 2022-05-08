@@ -19,6 +19,7 @@ export default {
   component: {
     name: '组件',
     // 组件名称
+    portalNavbar: '导航栏 PortalNavbar',
     icon: '图标 Icon',
     button: '按钮 Button',
     link: '链接 Link',

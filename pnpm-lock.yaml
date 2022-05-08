@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@arco-design/arco-site-utils': ^1.0.2
   '@arco-design/arco-vue-scripts': ^0.2.9
+  '@arco-design/vite-plugin-arco-vue-docs': ^0.1.0
   '@arco-design/web-vue': ^2.26.0
   '@dangojs/portal-navbar': file:///Users/saber/coding/mygithub/vue3-arco-pro-components/packages/portal-navbar
   '@types/nprogress': ^0.2.0
@@ -44,6 +45,7 @@ dependencies:
 
 devDependencies:
   '@arco-design/arco-vue-scripts': 0.2.9_eslint@8.14.0+vue@3.2.33
+  '@arco-design/vite-plugin-arco-vue-docs': registry.npmjs.org/@arco-design/vite-plugin-arco-vue-docs/0.1.0_vite@2.9.8
   '@arco-design/web-vue': 2.26.0_vue@3.2.33
   '@dangojs/portal-navbar': link:../vue3-arco-pro-components/packages/portal-navbar
   '@types/nprogress': 0.2.0
@@ -10119,6 +10121,22 @@ packages:
       yargs-parser: 18.1.3
     dev: true
 
+  registry.npmjs.org/@arco-design/vite-plugin-arco-vue-docs/0.1.0_vite@2.9.8:
+    resolution: {integrity: sha512-VXwSX11z2P7dC15S1xzqgRjjQWbOxDlZcAD20Iu2SzNLO9Q7iydkFCkgsZ7ehvcDqwvuDWNz8hVAfmJHZArwgQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@arco-design/vite-plugin-arco-vue-docs/-/vite-plugin-arco-vue-docs-0.1.0.tgz}
+    id: registry.npmjs.org/@arco-design/vite-plugin-arco-vue-docs/0.1.0
+    name: '@arco-design/vite-plugin-arco-vue-docs'
+    version: 0.1.0
+    peerDependencies:
+      '@vitejs/plugin-vue': ^1.2.3
+      vite: ^2.4.0
+    dependencies:
+      '@vue/compiler-sfc': registry.npmjs.org/@vue/compiler-sfc/3.2.33
+      js-yaml: registry.npmjs.org/js-yaml/4.1.0
+      marked: registry.npmjs.org/marked/2.1.3
+      prismjs: registry.npmjs.org/prismjs/1.28.0
+      vite: 2.9.8
+    dev: true
+
   registry.npmjs.org/@babel/parser/7.17.10:
     resolution: {integrity: sha512-n2Q6i+fnJqzOaq2VkdXxy2TCPCWQZHiCo0XqmrCvDWcZQKRyZzYi4Z0yxlBuN0w+r2ZHmre+Q087DSrw3pbJDQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@babel/parser/-/parser-7.17.10.tgz}
     name: '@babel/parser'
@@ -10215,6 +10233,12 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       color-convert: registry.npmjs.org/color-convert/2.0.1
+    dev: true
+
+  registry.npmjs.org/argparse/2.0.1:
+    resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz}
+    name: argparse
+    version: 2.0.1
     dev: true
 
   registry.npmjs.org/boolbase/1.0.0:
@@ -10471,6 +10495,15 @@ packages:
       tslib: registry.npmjs.org/tslib/2.4.0
     dev: true
 
+  registry.npmjs.org/js-yaml/4.1.0:
+    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz}
+    name: js-yaml
+    version: 4.1.0
+    hasBin: true
+    dependencies:
+      argparse: registry.npmjs.org/argparse/2.0.1
+    dev: true
+
   registry.npmjs.org/jsonfile/6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz}
     name: jsonfile
@@ -10495,6 +10528,14 @@ packages:
     version: 0.25.9
     dependencies:
       sourcemap-codec: registry.npmjs.org/sourcemap-codec/1.4.8
+    dev: true
+
+  registry.npmjs.org/marked/2.1.3:
+    resolution: {integrity: sha512-/Q+7MGzaETqifOMWYEA7HVMaZb4XbcRfaOzcSsHZEith83KGlvaSG33u0SKu89Mj5h+T8V2hM+8O45Qc5XTgwA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/marked/-/marked-2.1.3.tgz}
+    name: marked
+    version: 2.1.3
+    engines: {node: '>= 10'}
+    hasBin: true
     dev: true
 
   registry.npmjs.org/mdn-data/2.0.14:
@@ -10589,6 +10630,13 @@ packages:
       nanoid: registry.npmjs.org/nanoid/3.3.4
       picocolors: registry.npmjs.org/picocolors/1.0.0
       source-map-js: registry.npmjs.org/source-map-js/1.0.2
+    dev: true
+
+  registry.npmjs.org/prismjs/1.28.0:
+    resolution: {integrity: sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/prismjs/-/prismjs-1.28.0.tgz}
+    name: prismjs
+    version: 1.28.0
+    engines: {node: '>=6'}
     dev: true
 
   registry.npmjs.org/rollup/2.72.0:
