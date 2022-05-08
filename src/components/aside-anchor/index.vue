@@ -19,7 +19,7 @@
       >
         {{ item.title }}
       </a-anchor-link>
-      <a-anchor-link v-if="hasAPIAnchor" key="article-api" href="#API">
+      <a-anchor-link v-if="hasAPIAnchor" key="article-api" href="#api">
         API
       </a-anchor-link>
     </a-anchor>
@@ -66,7 +66,8 @@ export default defineComponent({
     ]);
 
     onMounted(() => {
-      hasAPIAnchor.value = !!document.querySelector('.article-content #API');
+      // todo: 如何兼容 大写API
+      hasAPIAnchor.value = !!document.querySelector('.article-content #api');
     });
 
     return {
