@@ -111,6 +111,28 @@ const zoologys = [
       },
     ],
   },
+  {
+    name: 'bigdata',
+    list: [
+      {
+        name: 'vue3Corn',
+        component: NoDoc,
+      },
+      {
+        name: 'vue3Monaco',
+        component: NoDoc,
+      }
+    ]
+  },
+  {
+    name: 'other',
+    list: [
+      {
+        name: 'vue3Snipp',
+        component: NoDoc,
+      }
+    ]
+  }
 ]
 
 const plugins = [
@@ -121,6 +143,37 @@ const plugins = [
         name: 'digitm',
         component: () => DigitmCli
       }
+    ]
+  },
+  {
+    name: 'vscode',
+    list: [
+      {
+        name: 'api2code',
+        component: NoDoc
+      },
+      {
+        name: 'createApplication',
+        component: NoDoc
+      },
+      {
+        name: 'snippetsUtils',
+        component: NoDoc
+      }
+    ]
+  },
+  {
+    name: 'chrome',
+    list: [
+      {
+        name: 'hinata',
+        component: NoDoc
+      }
+    ]
+  },
+  {
+    name: 'vite',
+    list: [
     ]
   }
 ]
