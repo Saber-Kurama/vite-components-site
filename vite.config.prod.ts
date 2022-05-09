@@ -11,33 +11,17 @@ import paths from './paths';
 const root = process.cwd();
 
 export default defineConfig({
-  mode: 'development',
-  server: {
-    open: true,
-    host: '0.0.0.0',
-    port: 2233,
-    fs: {
-      strict: true,
-      allow: ['..'],
-    },
-  },
+  mode: 'production',
+  base: '/',
   css: {
     preprocessorOptions: {
       less: {
-        paths: [paths.resolvePath('../web-vue')],
+       
       },
     },
   },
   resolve: {
     alias: [
-      {
-        find: /^@arco-design\/arco-vue-docs-navbar/,
-        replacement: path.resolve(root, './libs/arco-vue-docs-navbar'),
-      }
-      // {
-      //   find: /^@web-vue\/(.*)/,
-      //   replacement: path.resolve(root, '../web-vue/$1'),
-      // },
     ],
   },
   plugins: [
@@ -45,12 +29,6 @@ export default defineConfig({
     vue(),
     vueJsx(),
     svgLoader({ svgoConfig: {} }),
-    // eslint({
-    //   // hmr情况下cache存在问题
-    //   cache: false,
-    //   include: ['**/*.ts', '**/*.tsx', '**/*.vue'],
-    //   exclude: ['node_modules', '**/components/icon/**/*'],
-    // }),
     configStyleImportPlugin(),
   ],
 }) as InlineConfig;

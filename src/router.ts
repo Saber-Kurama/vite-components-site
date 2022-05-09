@@ -4,6 +4,8 @@ import nProgress from 'nprogress';
 const Start = () => import('./docs/start.zh-CN.md');
 const StartEn = () => import('./docs/start.en-US.md');
 const PortalNavbar = import('@dangojs/portal-navbar/docs/README.md');
+debugger;
+console.log('PortalNavbar', PortalNavbar)
 // const Dark = () => import('./docs/dark.zh-CN.md');
 // const DarkEn = () => import('./docs/dark.en-US.md');
 // const Theme = () => import('./docs/theme.zh-CN.md');
@@ -109,7 +111,7 @@ const components = [
       {
         name: 'portalNavbar',
         component: PortalNavbar,
-      }
+      },
     ],
   },
   //   {
@@ -533,7 +535,7 @@ for (const group of components) {
     const path = `/components/${toKebabCase(item.name)}`;
     routes.push({
       path,
-      component: item.component,
+      component: () => item.component,
     });
     menuGroup.list.push({
       name: item.name,
@@ -564,7 +566,10 @@ proDocs.forEach((item) => {
 
 // Add redirects for unmatched routes at the end
 routes.push({ path: '/components', redirect: '/components/portal-navbar' });
-routes.push({ path: '/:pathMatch(.*)*', redirect: '/components/portal-navbar' });
+routes.push({
+  path: '/:pathMatch(.*)*',
+  redirect: '/components/portal-navbar',
+});
 
 nProgress.configure({ minimum: 0.4, showSpinner: false });
 
