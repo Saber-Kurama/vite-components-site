@@ -563,8 +563,8 @@ proDocs.forEach((item) => {
 });
 
 // Add redirects for unmatched routes at the end
-routes.push({ path: '/components', redirect: '/components/button' });
-routes.push({ path: '/:pathMatch(.*)*', redirect: '/components/button' });
+routes.push({ path: '/components', redirect: '/components/portal-navbar' });
+routes.push({ path: '/:pathMatch(.*)*', redirect: '/components/portal-navbar' });
 
 nProgress.configure({ minimum: 0.4, showSpinner: false });
 
