@@ -21,8 +21,9 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: [
-    ],
+    alias: {
+      '@/': path.resolve(__dirname, './src'),
+    },
   },
   plugins: [
     vueDocs(),
