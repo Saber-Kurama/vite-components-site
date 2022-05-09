@@ -10,7 +10,7 @@ import packages from '@arco-design/web-vue/package.json';
 import router from './router';
 // @ts-ignore
 import locale from './locale';
-import App from '@/app.vue';
+import App from './app.vue';
 import ArcoArticle from './components/article/index.vue';
 import AnchorHead from './components/anchor-head/index.vue';
 import CodeBlock from './components/code-block/index.vue';
