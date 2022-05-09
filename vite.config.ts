@@ -31,9 +31,9 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: /^@arco-design\/arco-vue-docs-navbar/,
-        replacement: path.resolve(root, './libs/arco-vue-docs-navbar'),
-      }
+        find: 'vue-i18n',
+        replacement: 'vue-i18n/dist/vue-i18n.cjs.js', // Resolve the i18n warning issue
+      },
       // {
       //   find: /^@web-vue\/(.*)/,
       //   replacement: path.resolve(root, '../web-vue/$1'),

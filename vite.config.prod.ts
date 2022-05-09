@@ -1,4 +1,4 @@
-import path from 'path';
+import path, { dirname } from 'path';
 import { defineConfig, InlineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
@@ -10,20 +10,22 @@ import paths from './paths';
 
 const root = process.cwd();
 
+
 export default defineConfig({
   mode: 'production',
   base: '/',
   css: {
     preprocessorOptions: {
-      less: {
-       
-      },
+      less: {},
     },
   },
   resolve: {
-    alias: {
-      '@/': path.resolve(__dirname, './src'),
-    },
+    alias: [
+      {
+        find: 'vue-i18n',
+        replacement: path.join(__dirname,'node_modules/vue-i18n/dist/vue-i18n.cjs.js'), // Resolve the i18n warning issue
+      },
+    ],
   },
   plugins: [
     vueDocs(),
