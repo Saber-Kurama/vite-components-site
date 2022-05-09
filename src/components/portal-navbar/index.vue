@@ -96,7 +96,7 @@ const menusData = [
   {
     resourceCode: '4',
     resourceIcon: '#icon-xuanpinpeizhi',
-    resourceLink: '/assortment-setting',
+    resourceLink: '/plugins',
     resourceName: '开发套件',
   },
   {

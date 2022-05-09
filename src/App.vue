@@ -103,12 +103,13 @@ export default defineComponent({
 
     provide(
       collapseInjectionKey,
+      // @ts-ignore
       reactive({
         showNav,
         showAnchor,
         toggleNav,
         toggleAnchor,
-        path,
+        path: path,
         page,
       })
     );

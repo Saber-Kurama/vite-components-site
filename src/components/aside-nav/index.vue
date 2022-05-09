@@ -105,12 +105,13 @@
 <script lang="ts">
 import { computed, defineComponent, inject, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { componentMenu, docsMenuList, zoologysMenu } from '../../router';
+import { componentMenu, docsMenuList, zoologysMenu, pluginsMenu } from '../../router';
 import { CollapseContext, collapseInjectionKey } from '../../context';
 // todo: 后续调整统一配置
 const menusConfig = {
   'components': componentMenu,
-  'zoologys': zoologysMenu 
+  'zoologys': zoologysMenu,
+  'plugins': pluginsMenu 
 }
 
 

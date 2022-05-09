@@ -15,6 +15,7 @@ export default {
     feedback: '反馈',
     navigation: '导航',
     other: '其他',
+    cli: '构建工具'
   },
   components: {
     name: '组件',
@@ -93,6 +94,9 @@ export default {
     name: '组件',
    // 组件名称
    vue3Transitions: '动画 vue3Transitions', 
+  },
+  plugins: {
+    'digitm': 'git提交规范 digitm'
   },
   footer: {
     design: '设计',
