@@ -21,6 +21,11 @@ export default {
     name: '组件',
     // 组件名称
     portalNavbar: '导航栏 PortalNavbar',
+    queryHeader: '查询表单 QueryHeader',
+    queryTable: '查询表格 QueryTable',
+    pageContainer: '页面容器 pageContainer',
+    transferTree: '树穿梭框 transferTree',
+    // 穿梭框
     icon: '图标 Icon',
     button: '按钮 Button',
     link: '链接 Link',

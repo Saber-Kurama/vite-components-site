@@ -4,6 +4,7 @@ import nProgress from 'nprogress';
 const Start = () => import('./docs/start.zh-CN.md');
 const StartEn = () => import('./docs/start.en-US.md');
 const PortalNavbar = import('@dangojs/portal-navbar/docs/README.md');
+const NoDoc = import('./docs/nodoc.zh-CN.md');
 const Vue3Transitions = import('./docs/nodoc.zh-CN.md');
 
 const DigitmCli = import('./docs/plugins/cli/digitm.zh-CN.md');
@@ -40,14 +41,26 @@ const components = [
   {
     name: 'common',
     list: [
-      // {
-      //   name: 'button',
-      //   component: Start,
-      // },
       {
         name: 'portalNavbar',
         component: () => PortalNavbar,
       },
+      {
+        name: 'queryHeader',
+        component: NoDoc,
+      },
+      {
+        name: 'queryTable',
+        component: NoDoc,
+      },
+      {
+        name: 'pageContainer',
+        component: NoDoc,
+      },
+      {
+        name: 'transferTree',
+        component: NoDoc
+      }
     ],
   },
   //   {
