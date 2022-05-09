@@ -16,7 +16,7 @@ export default {
     navigation: 'Navigation',
     other: 'Other',
   },
-  component: {
+  components: {
     name: 'Component',
     // 组件名称
     icon: 'Icon',

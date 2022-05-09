@@ -16,7 +16,7 @@ export default {
     navigation: '导航',
     other: '其他',
   },
-  component: {
+  components: {
     name: '组件',
     // 组件名称
     portalNavbar: '导航栏 PortalNavbar',
@@ -88,6 +88,11 @@ export default {
     transfer: '数据穿梭框 Transfer',
     tree: '树 Tree',
     treeSelect: '树选择 TreeSelect',
+  },
+  zoologys: {
+    name: '组件',
+   // 组件名称
+   vue3Transitions: '动画 vue3Transitions', 
   },
   footer: {
     design: '设计',

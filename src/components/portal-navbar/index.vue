@@ -3,6 +3,7 @@
 // eslint-disable-next-line import/no-unresolved
 import PortalNavbar from '@dangojs/portal-navbar';
 import { ref } from 'vue';
+import router from '../../router';
 
 const logoMenusData = [
   {
@@ -77,19 +78,19 @@ const menusData = [
   {
     resourceCode: '1',
     resourceIcon: '#icon-xuanpinpeizhi',
-    resourceLink: '/assortment-setting',
+    resourceLink: '/docs',
     resourceName: '文档',
   },
   {
     resourceCode: '2',
     resourceIcon: '#icon-xuanpinpeizhi',
-    resourceLink: '/assortment-setting',
+    resourceLink: '/components',
     resourceName: '高级组件',
   },
   {
     resourceCode: '3',
     resourceIcon: '#icon-xuanpinpeizhi',
-    resourceLink: '/assortment-setting',
+    resourceLink: '/zoologys',
     resourceName: '组件生态',
   },
   {
@@ -129,6 +130,8 @@ const onLogoMenuClick = (item: any) => {
 };
 const onMenuClick = (key: string) => {
   console.log('key---', key);
+  const menu = menusData.find((menu) => menu.resourceCode === key); 
+  router.push({ path: menu?.resourceLink || '/'})
 };
 const onTenantChange = (value: string) => {
   console.log('value---', value);

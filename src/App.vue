@@ -50,6 +50,7 @@ import {
   watch,
   onMounted,
   onBeforeUnmount,
+  computed,
 } from 'vue';
 import { useRoute } from 'vue-router';
 // import { PageDurationTracker, teaLog } from '@arco-design/arco-site-utils';
@@ -75,6 +76,12 @@ export default defineComponent({
   },
   emits: ['themeChange', 'languageChange'],
   setup() {
+    const route = useRoute();
+    const path = computed(() => route.path);
+    const page = computed(() => {
+      const match = route.path.match(/\/(\w+)/);
+      return match?.[1] ?? 'home';
+    });
     const showNav = ref(true);
     const showAnchor = ref(true);
     const showGlobalNotice = ref(
@@ -101,6 +108,8 @@ export default defineComponent({
         showAnchor,
         toggleNav,
         toggleAnchor,
+        path,
+        page,
       })
     );
 
@@ -109,7 +118,6 @@ export default defineComponent({
     // locale.value = lang.value;
     // provide('changeLanguage', changeLanguage);
 
-    const route = useRoute();
     // let tracker: PageDurationTracker;
     let originPath = route.path;
 
@@ -117,6 +125,7 @@ export default defineComponent({
       // tracker = new PageDurationTracker((params) => {
       //   teaLog('page_view', { ...params, url_path: originPath });
       // });
+      console.log('page---', page);
     });
 
     onBeforeUnmount(() => {

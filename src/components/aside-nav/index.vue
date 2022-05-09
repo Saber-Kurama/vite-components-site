@@ -49,7 +49,7 @@
         <div class="aside-nav-group">
           <!-- <div class="aside-nav-group-name">{{ t('component.name') }}</div> -->
           <div
-            v-for="group of componentMenu"
+            v-for="group of menus"
             :key="group.name"
             class="aside-nav-group"
           >
@@ -81,7 +81,7 @@
                     class="aside-nav-item-link"
                     @click="navigate"
                   >
-                    {{ t(`component.${item.name}`) }}
+                    {{ t(`${page}.${item.name}`) }}
                   </a>
                 </li>
               </router-link>
@@ -102,10 +102,17 @@
   </aside>
 </template>
 
-<script>
-import { computed, defineComponent, ref } from 'vue';
+<script lang="ts">
+import { computed, defineComponent, inject, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { componentMenu, docsMenuList } from '../../router';
+import { componentMenu, docsMenuList, zoologysMenu } from '../../router';
+import { CollapseContext, collapseInjectionKey } from '../../context';
+// todo: 后续调整统一配置
+const menusConfig = {
+  'components': componentMenu,
+  'zoologys': zoologysMenu 
+}
+
 
 export default defineComponent({
   name: 'AsideNav',
@@ -117,8 +124,16 @@ export default defineComponent({
   },
   emits: ['buttonClick'],
   setup(props) {
+    const collapseCtx = inject<CollapseContext>(collapseInjectionKey);
     const { t, locale } = useI18n();
     const showNav = ref(true);
+    const menus:any = computed(() => {
+      // @ts-ignore
+      return menusConfig[collapseCtx.page] || componentMenu 
+    });
+    const page = computed(() => {
+      return collapseCtx?.page || 'components'
+    })
 
     const handleTranslationStart = () => {
       if (props.show) {
@@ -148,6 +163,8 @@ export default defineComponent({
       cls,
       handleTranslationStart,
       handleTranslationEnd,
+      menus,
+      page: page
     };
   },
 });
