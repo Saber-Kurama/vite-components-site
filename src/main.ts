@@ -8,11 +8,13 @@ import packages from '@arco-design/web-vue/package.json';
 // eslint-disable-next-line import/no-unresolved
 // import renderNavBar from '@arco-design/arco-vue-docs-navbar';
 import router from './router';
+// @ts-ignore
 import locale from './locale';
 import App from './app.vue';
 import ArcoArticle from './components/article/index.vue';
 import AnchorHead from './components/anchor-head/index.vue';
 import CodeBlock from './components/code-block/index.vue';
+// @ts-ignore
 import CellDemo from './components/cell-demo/index.vue';
 import CellCode from './components/cell-code/index.vue';
 import 'prismjs/themes/prism.css';
