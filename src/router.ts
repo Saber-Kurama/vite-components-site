@@ -47,19 +47,19 @@ const components = [
       },
       {
         name: 'queryHeader',
-        component: NoDoc,
+        component: () => NoDoc,
       },
       {
         name: 'queryTable',
-        component: NoDoc,
+        component: () => NoDoc,
       },
       {
         name: 'pageContainer',
-        component: NoDoc,
+        component: () => NoDoc,
       },
       {
         name: 'transferTree',
-        component: NoDoc
+        component: () => NoDoc
       }
     ],
   },
@@ -116,11 +116,11 @@ const zoologys = [
     list: [
       {
         name: 'vue3Corn',
-        component: NoDoc,
+        component: () => NoDoc,
       },
       {
         name: 'vue3Monaco',
-        component: NoDoc,
+        component: () => NoDoc,
       }
     ]
   },
@@ -129,7 +129,7 @@ const zoologys = [
     list: [
       {
         name: 'vue3Snipp',
-        component: NoDoc,
+        component: () => NoDoc,
       }
     ]
   }
@@ -150,15 +150,15 @@ const plugins = [
     list: [
       {
         name: 'api2code',
-        component: NoDoc
+        component: () => NoDoc
       },
       {
         name: 'createApplication',
-        component: NoDoc
+        component: () => NoDoc
       },
       {
         name: 'snippetsUtils',
-        component: NoDoc
+        component: () => NoDoc
       }
     ]
   },
@@ -167,7 +167,7 @@ const plugins = [
     list: [
       {
         name: 'hinata',
-        component: NoDoc
+        component: () => NoDoc
       }
     ]
   },
