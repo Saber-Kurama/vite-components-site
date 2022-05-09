@@ -9,7 +9,7 @@
   "scripts": {
     "bootstrap:dev": "cross-env NODE_ENV=development pnpm install",
     "start": "vite",
-    "build": "arco-vue-scripts build:site",
+    "build": "vite build",
     "lint-staged": "npx lint-staged"
   },
   "lint-staged": {
@@ -26,7 +26,7 @@
     "@arco-design/arco-vue-scripts": "^0.2.9",
     "@arco-design/vite-plugin-arco-vue-docs": "^0.1.0",
     "@arco-design/web-vue": "^2.26.0",
-    "@dangojs/portal-navbar": "^0.0.1",
+    "@dangojs/portal-navbar": "^0.0.2",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",

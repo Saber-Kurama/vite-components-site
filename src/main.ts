@@ -1,4 +1,3 @@
-
 import { createApp } from 'vue';
 import { createI18n } from 'vue-i18n';
 import ArcoVue, { addI18nMessages, useLocale } from '@arco-design/web-vue';
