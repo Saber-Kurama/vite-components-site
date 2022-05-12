@@ -4,6 +4,7 @@ import nProgress from 'nprogress';
 const Start = () => import('./docs/start.zh-CN.md');
 const StartEn = () => import('./docs/start.en-US.md');
 const PortalNavbar = import('@dangojs/portal-navbar/docs/README.md');
+const QueryHeader = import('@dangojs/a-query-header/docs/README.md');
 const NoDoc = import('./docs/nodoc.zh-CN.md');
 const Vue3Transitions = import('./docs/nodoc.zh-CN.md');
 
@@ -47,7 +48,7 @@ const components = [
       },
       {
         name: 'queryHeader',
-        component: () => NoDoc,
+        component: () => QueryHeader,
       },
       {
         name: 'queryTable',

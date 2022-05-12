@@ -19,7 +19,7 @@ export default {
     cli: '构建工具',
     vscode: 'vscode插件',
     chrome: '浏览器插件',
-    vite: 'vite插件'
+    vite: 'vite插件',
   },
   components: {
     name: '组件',
@@ -101,18 +101,18 @@ export default {
   },
   zoologys: {
     name: '组件',
-   // 组件名称
-   vue3Transitions: '动画 vue3Transitions',
-   vue3Corn: 'Corn选择器',
-   vue3Monaco: 'monaco代码编辑器',
-   vue3Snipp: 'snipp.in'  
+    // 组件名称
+    vue3Transitions: '动画 vue3Transitions',
+    vue3Corn: 'Corn选择器',
+    vue3Monaco: 'monaco代码编辑器',
+    vue3Snipp: 'snipp.in',
   },
   plugins: {
-    'digitm': 'git提交规范 digitm',
-    'api2code': 'swagger生成代码',
-    'createApplication': '模板创建项目和组件',
-    'snippetsUtils': '共享代码提示',
-    'hinata': 'hinata'
+    digitm: 'git提交规范 digitm',
+    api2code: 'swagger生成代码',
+    createApplication: '模板创建项目和组件',
+    snippetsUtils: '共享代码提示',
+    hinata: 'hinata',
   },
   footer: {
     design: '设计',

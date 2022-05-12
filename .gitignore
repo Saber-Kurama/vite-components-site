@@ -4,6 +4,8 @@ node_modules
 dist
 dist-ssr
 
+.pnpm-debug.log
+
 .idea/
 .vscode/
 
