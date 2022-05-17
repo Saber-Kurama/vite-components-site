@@ -4,6 +4,7 @@ import ArcoVue, { addI18nMessages, useLocale } from '@arco-design/web-vue';
 import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 import '@dangojs/a-query-header/dist/css/index.css';
 import '@dangojs/a-page-container/dist/css/index.css';
+import '@dangojs/a-transfer-tree/dist/css/index.css';
 // import enUS from '@web-vue/components/locale/lang/en-us';
 import packages from '@arco-design/web-vue/package.json';
 // @ts-ignore

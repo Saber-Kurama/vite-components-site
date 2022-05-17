@@ -1,7 +1,7 @@
 /*
  * @Author: saber
  * @Date: 2022-04-18 16:30:03
- * @LastEditTime: 2022-05-16 16:01:03
+ * @LastEditTime: 2022-05-17 19:18:36
  * @LastEditors: chenguanyin
  * @Description:
  */
@@ -18,5 +18,9 @@ export const dongojsLibs = [
   {
     libraryName: '@dangojs/portal-navbar',
     base: '@dangojs/portal-navbar/dist/css',
+  },
+  {
+    libraryName: '@dangojs/a-transfer-tree',
+    base: '@dangojs/a-transfer-tree/dist/css',
   },
 ];
