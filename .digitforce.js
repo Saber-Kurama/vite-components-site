@@ -1,11 +1,11 @@
 /*
  * @Author: saber
  * @Date: 2022-01-12 19:57:21
- * @LastEditTime: 2022-05-08 09:34:14
- * @LastEditors: saber
+ * @LastEditTime: 2022-05-16 14:17:31
+ * @LastEditors: chenguanyin
  * @Description:
  */
-const dangojsComBasePath = '/Users/saber/coding/mygithub/vue3-arco-pro-components/packages';
+const dangojsComBasePath = '/Users/chenguanyin/DigitForce/vue3-arco-pro-components/packages';
 const baseSource = '/Users/saber/coding/mygithub';
 const envBridgePath = `${baseSource}/vite-plugin-env-bridge`
 
