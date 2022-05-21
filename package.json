@@ -29,6 +29,8 @@
     "@dangojs/portal-navbar": "^0.0.6",
     "@dangojs/a-query-header": "^0.0.14",
     "@dangojs/a-query-table": "^0.0.8",
+    "@dangojs/a-page-container": "^0.0.6",
+    "@dangojs/a-transfer-tree": "^0.0.3",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",

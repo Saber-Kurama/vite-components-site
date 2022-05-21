@@ -6,11 +6,12 @@ const StartEn = () => import('./docs/start.en-US.md');
 const PortalNavbar = import('@dangojs/portal-navbar/docs/README.md');
 const QueryHeader = import('@dangojs/a-query-header/docs/README.md');
 const QueryTable = import('@dangojs/a-query-table/docs/README.md');
+const PageContainer = import('@dangojs/a-page-container/docs/README.md');
+const transferTree = import('@dangojs/a-transfer-tree/docs/README.md');
 const NoDoc = import('./docs/nodoc.zh-CN.md');
 const Vue3Transitions = import('./docs/nodoc.zh-CN.md');
 
 const DigitmCli = import('./docs/plugins/cli/digitm.zh-CN.md');
-
 
 const docs = [
   {
@@ -57,12 +58,12 @@ const components = [
       },
       {
         name: 'pageContainer',
-        component: () => NoDoc,
+        component: () => PageContainer,
       },
       {
         name: 'transferTree',
-        component: () => NoDoc
-      }
+        component: () => transferTree,
+      },
     ],
   },
   //   {
@@ -73,7 +74,7 @@ const components = [
   //   {
   //     name: 'layout',
   //     list: [
-  
+
   //     ],
   //   },
   //   {
@@ -123,8 +124,8 @@ const zoologys = [
       {
         name: 'vue3Monaco',
         component: () => NoDoc,
-      }
-    ]
+      },
+    ],
   },
   {
     name: 'other',
@@ -132,10 +133,10 @@ const zoologys = [
       {
         name: 'vue3Snipp',
         component: () => NoDoc,
-      }
-    ]
-  }
-]
+      },
+    ],
+  },
+];
 
 const plugins = [
   {
@@ -143,43 +144,41 @@ const plugins = [
     list: [
       {
         name: 'digitm',
-        component: () => DigitmCli
-      }
-    ]
+        component: () => DigitmCli,
+      },
+    ],
   },
   {
     name: 'vscode',
     list: [
       {
         name: 'api2code',
-        component: () => NoDoc
+        component: () => NoDoc,
       },
       {
         name: 'createApplication',
-        component: () => NoDoc
+        component: () => NoDoc,
       },
       {
         name: 'snippetsUtils',
-        component: () => NoDoc
-      }
-    ]
+        component: () => NoDoc,
+      },
+    ],
   },
   {
     name: 'chrome',
     list: [
       {
         name: 'hinata',
-        component: () => NoDoc
-      }
-    ]
+        component: () => NoDoc,
+      },
+    ],
   },
   {
     name: 'vite',
-    list: [
-    ]
-  }
-]
-
+    list: [],
+  },
+];
 
 function toKebabCase(string: string) {
   return string.replace(/[A-Z]+/g, (match, offset) => {
@@ -237,7 +236,7 @@ for (const group of components) {
 }
 
 // 组件生态
-const zoologysMenu:ComponentMenuGroup[] = [];
+const zoologysMenu: ComponentMenuGroup[] = [];
 for (const group of zoologys) {
   const menuGroup: ComponentMenuGroup = {
     name: group.name,
@@ -278,8 +277,6 @@ for (const group of plugins) {
   pluginsMenu.push(menuGroup);
 }
 
-
-
 // Add redirects for unmatched routes at the end
 routes.push({ path: '/components', redirect: '/components/portal-navbar' });
 routes.push({ path: '/zoologys', redirect: '/zoologys/vue3-transitions' });
@@ -314,7 +311,7 @@ const docsMenuList = [
   {
     name: 'docs',
     menu: docsMenu,
-  }
+  },
 ];
 
 export { docsMenu, componentMenu, docsMenuList, zoologysMenu, pluginsMenu };

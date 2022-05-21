@@ -1,8 +1,8 @@
 /*
  * @Author: saber
  * @Date: 2022-04-18 16:30:03
- * @LastEditTime: 2022-05-08 12:09:13
- * @LastEditors: saber
+ * @LastEditTime: 2022-05-17 19:18:36
+ * @LastEditors: chenguanyin
  * @Description:
  */
 // dongojs 组件的 less 的引入 使用的的是 vite-plugin-style-import
@@ -18,5 +18,9 @@ export const dongojsLibs = [
   {
     libraryName: '@dangojs/portal-navbar',
     base: '@dangojs/portal-navbar/dist/css',
+  },
+  {
+    libraryName: '@dangojs/a-transfer-tree',
+    base: '@dangojs/a-transfer-tree/dist/css',
   },
 ];

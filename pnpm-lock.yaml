@@ -4,8 +4,10 @@ specifiers:
   '@arco-design/arco-vue-scripts': ^0.2.9
   '@arco-design/vite-plugin-arco-vue-docs': ^0.1.0
   '@arco-design/web-vue': ^2.26.0
+  '@dangojs/a-page-container': ^0.0.6
   '@dangojs/a-query-header': ^0.0.14
   '@dangojs/a-query-table': ^0.0.8
+  '@dangojs/a-transfer-tree': ^0.0.3
   '@dangojs/portal-navbar': ^0.0.6
   '@types/nprogress': ^0.2.0
   '@typescript-eslint/eslint-plugin': ^5.22.0
@@ -47,8 +49,10 @@ devDependencies:
   '@arco-design/arco-vue-scripts': 0.2.9_eslint@8.15.0+vue@3.2.33
   '@arco-design/vite-plugin-arco-vue-docs': 0.1.0_vite@2.9.8
   '@arco-design/web-vue': 2.26.0_vue@3.2.33
+  '@dangojs/a-page-container': 0.0.6_50f798f85727d9147470ab32389f7848
   '@dangojs/a-query-header': 0.0.14_vue@3.2.33
   '@dangojs/a-query-table': 0.0.8_50f798f85727d9147470ab32389f7848
+  '@dangojs/a-transfer-tree': 0.0.3_50f798f85727d9147470ab32389f7848
   '@dangojs/portal-navbar': 0.0.6_50f798f85727d9147470ab32389f7848
   '@types/nprogress': 0.2.0
   '@typescript-eslint/eslint-plugin': 5.22.0_9817cbad956b8aa5d1e3d9ec99e4a1e4
@@ -1394,6 +1398,17 @@ packages:
       minimist: 1.2.6
     dev: true
 
+  /@dangojs/a-page-container/0.0.6_50f798f85727d9147470ab32389f7848:
+    resolution: {integrity: sha512-IjSrjxGPdysOin4dZPx0jZIvksVq9KxPPtLCa/7hmeMB//zFk7IQcj6adH5aP/3l6EpjDn2ndc5c/t6QN8l+jw==}
+    peerDependencies:
+      '@arco-design/web-vue': ^2.18.0-beta.3
+      vue: ^3.2.0
+    dependencies:
+      '@arco-design/web-vue': 2.26.0_vue@3.2.33
+      '@digitforce/vue-utils': 0.0.2
+      vue: 3.2.33
+    dev: true
+
   /@dangojs/a-query-header/0.0.14_vue@3.2.33:
     resolution: {integrity: sha512-W2gl8k1NkqW6YvUdQCMpJk1GKHlcidDUWRj6m4UaIAW4QtoYDvGCK5Un+k4Xmw2O8pHcM8o1rj8ku0Vd6kYsGQ==}
     peerDependencies:
@@ -1406,6 +1421,16 @@ packages:
 
   /@dangojs/a-query-table/0.0.8_50f798f85727d9147470ab32389f7848:
     resolution: {integrity: sha512-f/YZrhgIw82ojJliFMo5vW3mb0Q0s8BASgav8ytgbPw8bRbpxwp3vCaKrMhMr65yOAFGK4vX8Kkg8nAsCnnVUg==}
+    peerDependencies:
+      '@arco-design/web-vue': ^2.18.0-beta.3
+      vue: ^3.2.0
+    dependencies:
+      '@arco-design/web-vue': 2.26.0_vue@3.2.33
+      vue: 3.2.33
+    dev: true
+
+  /@dangojs/a-transfer-tree/0.0.3_50f798f85727d9147470ab32389f7848:
+    resolution: {integrity: sha512-XZmELs0Wm3niBbKNdVnyJ1o0sT4s+F7a3iOkE/8ac1Y71UdHFVFam47LNUzyRr4B2wZSbkg2MJAFbbLh+Z8YKA==}
     peerDependencies:
       '@arco-design/web-vue': ^2.18.0-beta.3
       vue: ^3.2.0
