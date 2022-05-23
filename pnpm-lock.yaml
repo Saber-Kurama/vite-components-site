@@ -8,7 +8,7 @@ specifiers:
   '@dangojs/a-query-header': ^0.0.14
   '@dangojs/a-query-table': ^0.0.8
   '@dangojs/a-transfer-tree': ^0.0.3
-  '@dangojs/portal-navbar': ^0.0.6
+  '@dangojs/portal-navbar': ^0.0.7
   '@types/nprogress': ^0.2.0
   '@typescript-eslint/eslint-plugin': ^5.22.0
   '@typescript-eslint/parser': ^5.22.0
@@ -53,7 +53,7 @@ devDependencies:
   '@dangojs/a-query-header': 0.0.14_vue@3.2.33
   '@dangojs/a-query-table': 0.0.8_50f798f85727d9147470ab32389f7848
   '@dangojs/a-transfer-tree': 0.0.3_50f798f85727d9147470ab32389f7848
-  '@dangojs/portal-navbar': 0.0.6_50f798f85727d9147470ab32389f7848
+  '@dangojs/portal-navbar': 0.0.7_50f798f85727d9147470ab32389f7848
   '@types/nprogress': 0.2.0
   '@typescript-eslint/eslint-plugin': 5.22.0_9817cbad956b8aa5d1e3d9ec99e4a1e4
   '@typescript-eslint/parser': 5.22.0_eslint@8.15.0+typescript@4.6.4
@@ -1439,10 +1439,11 @@ packages:
       vue: 3.2.33
     dev: true
 
-  /@dangojs/portal-navbar/0.0.6_50f798f85727d9147470ab32389f7848:
-    resolution: {integrity: sha512-OPq8o1brApqDC8rcittl/djFuu+U5xWIfgeHW068EYBld/Xues3NTlMn0OxoukCLk6Q8qZ933ikFU+Jab1Jnww==}
+  /@dangojs/portal-navbar/0.0.7_50f798f85727d9147470ab32389f7848:
+    resolution: {integrity: sha512-wAreYYLa7eQtnrwO2/dsDQ7auYFQdLZzIDrDdMImgfyFGCSMYzZgWlYALyr+ne5psAkR3QGwdN3M+Edb+D8/eA==}
     peerDependencies:
       '@arco-design/web-vue': ^2.19.0
+      '@dangojs/digitforce-icons-vue': ^0.0.1
       vue: ^3.2.0
     dependencies:
       '@arco-design/web-vue': 2.26.0_vue@3.2.33

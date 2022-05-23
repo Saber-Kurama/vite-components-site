@@ -1,8 +1,8 @@
 /*
  * @Author: saber
  * @Date: 2022-01-12 19:57:21
- * @LastEditTime: 2022-05-17 19:15:40
- * @LastEditors: chenguanyin
+ * @LastEditTime: 2022-05-22 17:51:52
+ * @LastEditors: saber
  * @Description:
  */
 const dangojsComBasePath =
