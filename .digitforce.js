@@ -1,14 +1,15 @@
 /*
  * @Author: saber
  * @Date: 2022-01-12 19:57:21
- * @LastEditTime: 2022-05-22 17:51:52
+ * @LastEditTime: 2022-05-23 22:19:42
  * @LastEditors: saber
  * @Description:
  */
 const dangojsComBasePath =
-  '/Users/chenguanyin/DigitForce/vue3-arco-pro-components/packages';
+'/Users/saber/coding/mygithub/vue3-arco-pro-components/packages';
 const baseSource = '/Users/saber/coding/mygithub';
 const envBridgePath = `${baseSource}/vite-plugin-env-bridge`;
+const iconpath = `/Users/saber/coding/mygithub/digitforce-icons/packages/vue`
 
 // TODO: 这个需要通过 digitforceBasePath 来得到 绝对路径，目前是手写
 const linkPaths = {
@@ -17,6 +18,7 @@ const linkPaths = {
   '@dangojs/a-page-container': `file://${dangojsComBasePath}/page-container`,
   '@dangojs/portal-navbar': `file://${dangojsComBasePath}/portal-navbar`,
   '@dangojs/a-transfer-tree': `file://${dangojsComBasePath}/transfer-tree`,
+  '@dangojs/digitforce-icons-vue': `file://${iconpath}`
 };
 
 module.exports.linkPaths = linkPaths;

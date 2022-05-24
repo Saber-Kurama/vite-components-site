@@ -10,25 +10,21 @@ title:
 
 ---
 
-## en-US
-
-The on-demand import can be achieved by separately introducing icons.
-
----
-
 ```vue
 <template>
   <a-space size="large">
-    <icon-plus :style="{fontSize:'32px'}" />
-    <icon-check-circle :style="{fontSize:'32px'}" />
+    <general :style="{fontSize:'32px'}" />
+    <Fire :style="{fontSize:'32px'}" />
   </a-space>
 </template>
 
 <script>
-import { IconPlus, IconCheckCircle } from '@arco-design/web-vue/es/icon';
-
+import { Fire, General  } from '@dangojs/digitforce-icons-vue';
+console.log('Fire', File);
 export default {
-  components: { IconPlus, IconCheckCircle }
+  components: { Fire, General }
 }
 </script>
 ```
+
+

@@ -3,6 +3,7 @@ import nProgress from 'nprogress';
 
 const Start = () => import('./docs/start.zh-CN.md');
 const StartEn = () => import('./docs/start.en-US.md');
+const Icon = () => import('./pages/icon/icon-demo.vue');
 const PortalNavbar = import('@dangojs/portal-navbar/docs/README.md');
 const QueryHeader = import('@dangojs/a-query-header/docs/README.md');
 const QueryTable = import('@dangojs/a-query-table/docs/README.md');
@@ -44,6 +45,10 @@ const components = [
   {
     name: 'common',
     list: [
+      {
+        name: 'icon',
+        component: Icon,
+      },
       {
         name: 'portalNavbar',
         component: () => PortalNavbar,
