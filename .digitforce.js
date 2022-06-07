@@ -1,7 +1,7 @@
 /*
  * @Author: saber
  * @Date: 2022-01-12 19:57:21
- * @LastEditTime: 2022-05-23 22:19:42
+ * @LastEditTime: 2022-06-07 13:52:06
  * @LastEditors: saber
  * @Description:
  */
@@ -18,7 +18,8 @@ const linkPaths = {
   '@dangojs/a-page-container': `file://${dangojsComBasePath}/page-container`,
   '@dangojs/portal-navbar': `file://${dangojsComBasePath}/portal-navbar`,
   '@dangojs/a-transfer-tree': `file://${dangojsComBasePath}/transfer-tree`,
-  '@dangojs/digitforce-icons-vue': `file://${iconpath}`
+  '@dangojs/digitforce-icons-vue': `file://${iconpath}`,
+  // '@dangojs/saber-btn': `file://${dangojsComBasePath}/saber-btn`
 };
 
 module.exports.linkPaths = linkPaths;

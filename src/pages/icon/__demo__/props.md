@@ -17,7 +17,7 @@ title:
 |spin|是否旋转|`boolean`|`false`|
 |size|尺寸|`number` \| `string`|`-`|
 
-[查看更多图标](https://arco.design/iconbox/lib/222/0)
+[查看更多图标](https://icons-nextjs-site.vercel.app/#416-%E9%80%9A%E7%94%A8%E7%B1%BB%E5%9B%BE%E6%A0%87)
 
 ---
 ``` vue

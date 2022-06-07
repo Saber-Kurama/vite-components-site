@@ -14,15 +14,17 @@ title:
 <template>
   <a-space size="large">
     <general :style="{fontSize:'32px'}" />
-    <Fire :style="{fontSize:'32px'}" />
+    <Home :style="{fontSize:'32px', color: 'red'}" />
+    <Dashboard size="32" />
+    <FileSync size="32" />
+    <MenuFold size="32" />
   </a-space>
 </template>
 
 <script>
-import { Fire, General  } from '@dangojs/digitforce-icons-vue';
-console.log('Fire', File);
+import { Fire, General, Home, Dashboard, FileSync, MenuFold  } from '@dangojs/digitforce-icons-vue';
 export default {
-  components: { Fire, General }
+  components: { Fire, General, Home, Dashboard, FileSync, MenuFold }
 }
 </script>
 ```

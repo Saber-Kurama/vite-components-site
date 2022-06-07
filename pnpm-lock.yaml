@@ -4,12 +4,12 @@ specifiers:
   '@arco-design/arco-vue-scripts': ^0.2.9
   '@arco-design/vite-plugin-arco-vue-docs': ^0.1.0
   '@arco-design/web-vue': ^2.26.0
-  '@dangojs/a-page-container': ^0.0.6
-  '@dangojs/a-query-header': ^0.0.14
+  '@dangojs/a-page-container': ^0.0.7
+  '@dangojs/a-query-header': ^0.0.16
   '@dangojs/a-query-table': ^0.0.8
-  '@dangojs/a-transfer-tree': ^0.0.3
-  '@dangojs/digitforce-icons-vue': ^0.0.7
-  '@dangojs/portal-navbar': ^0.0.7
+  '@dangojs/a-transfer-tree': ^0.0.4
+  '@dangojs/digitforce-icons-vue': ^0.0.9
+  '@dangojs/portal-navbar': ^0.0.11
   '@types/nprogress': ^0.2.0
   '@typescript-eslint/eslint-plugin': ^5.22.0
   '@typescript-eslint/parser': ^5.22.0
@@ -50,12 +50,12 @@ devDependencies:
   '@arco-design/arco-vue-scripts': 0.2.9_eslint@8.16.0+vue@3.2.36
   '@arco-design/vite-plugin-arco-vue-docs': 0.1.0_vite@2.9.9
   '@arco-design/web-vue': 2.28.0_vue@3.2.36
-  '@dangojs/a-page-container': 0.0.6_15d18d70c5ddb19c31c5bc80d647e951
-  '@dangojs/a-query-header': 0.0.14_vue@3.2.36
+  '@dangojs/a-page-container': 0.0.7_15d18d70c5ddb19c31c5bc80d647e951
+  '@dangojs/a-query-header': 0.0.16_vue@3.2.36
   '@dangojs/a-query-table': 0.0.8_15d18d70c5ddb19c31c5bc80d647e951
-  '@dangojs/a-transfer-tree': 0.0.3_15d18d70c5ddb19c31c5bc80d647e951
-  '@dangojs/digitforce-icons-vue': 0.0.7_vue@3.2.36
-  '@dangojs/portal-navbar': 0.0.7_334491bb936d176b67f1666c49af404c
+  '@dangojs/a-transfer-tree': 0.0.4_15d18d70c5ddb19c31c5bc80d647e951
+  '@dangojs/digitforce-icons-vue': 0.0.9_vue@3.2.36
+  '@dangojs/portal-navbar': 0.0.11_123d00df5f2d3f855ae312db7230b9de
   '@types/nprogress': 0.2.0
   '@typescript-eslint/eslint-plugin': 5.26.0_3538258888b78689808cec7bffc2237a
   '@typescript-eslint/parser': 5.26.0_eslint@8.16.0+typescript@4.6.4
@@ -1413,24 +1413,26 @@ packages:
       minimist: 1.2.6
     dev: true
 
-  /@dangojs/a-page-container/0.0.6_15d18d70c5ddb19c31c5bc80d647e951:
-    resolution: {integrity: sha512-IjSrjxGPdysOin4dZPx0jZIvksVq9KxPPtLCa/7hmeMB//zFk7IQcj6adH5aP/3l6EpjDn2ndc5c/t6QN8l+jw==}
+  /@dangojs/a-page-container/0.0.7_15d18d70c5ddb19c31c5bc80d647e951:
+    resolution: {integrity: sha512-/7SUqN2y9Q3NyU8oua5ODkguMtrCdHTBD5snuRvz7HOpiR8qDGW9Sl7Es2J57l8GJ3lugZavuc5bJH6dJyT11Q==}
     peerDependencies:
       '@arco-design/web-vue': ^2.18.0-beta.3
       vue: ^3.2.0
     dependencies:
       '@arco-design/web-vue': 2.28.0_vue@3.2.36
+      '@dangojs/digitforce-icons-vue': 0.0.9_vue@3.2.36
       '@digitforce/vue-utils': 0.0.2
       vue: 3.2.36
     dev: true
 
-  /@dangojs/a-query-header/0.0.14_vue@3.2.36:
-    resolution: {integrity: sha512-W2gl8k1NkqW6YvUdQCMpJk1GKHlcidDUWRj6m4UaIAW4QtoYDvGCK5Un+k4Xmw2O8pHcM8o1rj8ku0Vd6kYsGQ==}
+  /@dangojs/a-query-header/0.0.16_vue@3.2.36:
+    resolution: {integrity: sha512-dxQpD1ZvfdE0eOGfuqb1Q5PL0F0AI1hQiiENousM39MbIkd1QCmPdkLuA7MMdU9tO0D1vunLPGeOm7jrtVm+QQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@arco-design/web-vue': 2.28.0_vue@3.2.36
       '@digitforce/vue-utils': 0.0.2
+      lodash-es: 4.17.21
       vue: 3.2.36
     dev: true
 
@@ -1444,8 +1446,8 @@ packages:
       vue: 3.2.36
     dev: true
 
-  /@dangojs/a-transfer-tree/0.0.3_15d18d70c5ddb19c31c5bc80d647e951:
-    resolution: {integrity: sha512-XZmELs0Wm3niBbKNdVnyJ1o0sT4s+F7a3iOkE/8ac1Y71UdHFVFam47LNUzyRr4B2wZSbkg2MJAFbbLh+Z8YKA==}
+  /@dangojs/a-transfer-tree/0.0.4_15d18d70c5ddb19c31c5bc80d647e951:
+    resolution: {integrity: sha512-I4MK5NZUdNzrQgrvM64a6fFFhseLHsCjnIGsthe19aeidU0LC3U5AeSpUlkY6JjiOLDzavRUbG4yFWlYAWQOOw==}
     peerDependencies:
       '@arco-design/web-vue': ^2.18.0-beta.3
       vue: ^3.2.0
@@ -1454,8 +1456,8 @@ packages:
       vue: 3.2.36
     dev: true
 
-  /@dangojs/digitforce-icons-vue/0.0.7_vue@3.2.36:
-    resolution: {integrity: sha512-8jNYHWaRHVUSlcj56t0MGUjoxcrjAy3WpJ9nWKFtLxnRkVa31ohYagK3meRGl6W8znrjFDabUZKfcymPxqj3YA==}
+  /@dangojs/digitforce-icons-vue/0.0.9_vue@3.2.36:
+    resolution: {integrity: sha512-ITSHV0zF5T/hj8cpACkiOrf93fi3YZrDiRPQwBVQw+7ssKY4kXGrfChB55Sy4Kg5qqNbSzkzQD3A6pCoLpizXg==}
     engines: {node: '>= 8.0.0', npm: '>= 5.0.0'}
     peerDependencies:
       vue: 3.x
@@ -1463,15 +1465,15 @@ packages:
       vue: 3.2.36
     dev: true
 
-  /@dangojs/portal-navbar/0.0.7_334491bb936d176b67f1666c49af404c:
-    resolution: {integrity: sha512-wAreYYLa7eQtnrwO2/dsDQ7auYFQdLZzIDrDdMImgfyFGCSMYzZgWlYALyr+ne5psAkR3QGwdN3M+Edb+D8/eA==}
+  /@dangojs/portal-navbar/0.0.11_123d00df5f2d3f855ae312db7230b9de:
+    resolution: {integrity: sha512-yMecEkNwkh+TsCa3f8Lsu7wBvFhfEY0GFPyPw6xyurjgsYeya1sCSk5ZHiAUuUnuU9oqyDUASdKGTJ18L4Qnfw==}
     peerDependencies:
       '@arco-design/web-vue': ^2.19.0
-      '@dangojs/digitforce-icons-vue': ^0.0.1
+      '@dangojs/digitforce-icons-vue': ^0.0.9
       vue: ^3.2.0
     dependencies:
       '@arco-design/web-vue': 2.28.0_vue@3.2.36
-      '@dangojs/digitforce-icons-vue': 0.0.7_vue@3.2.36
+      '@dangojs/digitforce-icons-vue': 0.0.9_vue@3.2.36
       vue: 3.2.36
     dev: true
 
@@ -5487,7 +5489,7 @@ packages:
     dev: true
 
   /image-size/0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
+    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
@@ -6799,6 +6801,10 @@ packages:
       p-locate: 4.1.0
     dev: true
 
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: true
+
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha1-gteb/zCmfEAF/9XiUVMArZyk168=}
     dev: true
@@ -6900,7 +6906,7 @@ packages:
     optional: true
 
   /make-dir/3.1.0:
-    resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
+    resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz}
     engines: {node: '>=8'}
     dependencies:
       semver: 6.3.0
@@ -8999,7 +9005,7 @@ packages:
     dev: true
 
   /source-map/0.5.7:
-    resolution: {integrity: sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=}
+    resolution: {integrity: sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -9009,7 +9015,7 @@ packages:
     dev: true
 
   /source-map/0.7.3:
-    resolution: {integrity: sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==}
+    resolution: {integrity: sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz}
     engines: {node: '>= 8'}
     dev: true
 
