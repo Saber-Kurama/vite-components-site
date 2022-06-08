@@ -1,6 +1,6 @@
 <template>
   <arco-article v-bind="data">
-    <div class="arco-vue-icon-header">
+    <!-- <div class="arco-vue-icon-header">
       <a-form layout="inline" :model="form">
         <a-form-item field="strokeWidth" :label="t('icon.strokeWidth')">
           <a-slider
@@ -28,8 +28,8 @@
           />
         </a-form-item>
       </a-form>
-    </div>
-    <section
+    </div> -->
+    <!-- <section
       v-for="data of icons"
       :key="data.type"
       class="arco-vue-icon-section"
@@ -48,34 +48,32 @@
           </div>
         </li>
       </ul>
-    </section>
-    <basic-demo />
+    </section> -->
+    
     <tree-shaking-demo />
-    <spin-demo />
-    <icon-font />
+   
+    <api-demo />
   </arco-article>
 </template>
 
 <script lang="ts">
 import { defineComponent, computed, ref, reactive } from 'vue';
+import { Fire, General  } from '@dangojs/digitforce-icons-vue';
 import { useI18n } from 'vue-i18n';
-import * as components from '@web-vue/components/icon';
-import icons from '@web-vue/icon/icons.json';
-import { clipboard } from '@web-vue/components/_utils/clipboard';
-import Message from '@web-vue/components/message';
-import BasicDemo from './__demo__/basic.md';
-import SpinDemo from './__demo__/spin.md';
-import IconFont from './__demo__/icon-font.md';
+
 import TreeShakingDemo from './__demo__/tree-shaking.md';
+import ApiDemo from './__demo__/props.md';
 
 export default defineComponent({
   name: 'IconMain',
   components: {
-    ...components,
-    BasicDemo,
-    SpinDemo,
-    IconFont,
+    // ...components,
+    // BasicDemo,
+    // SpinDemo,
+    // IconFont,
+    Fire,
     TreeShakingDemo,
+    ApiDemo
   },
   setup() {
     const { t, locale } = useI18n();
@@ -119,18 +117,18 @@ export default defineComponent({
     };
 
     const handleIconClick = (iconName: string) => {
-      const componentName = `<${iconName} />`;
+      // const componentName = `<${iconName} />`;
 
-      clipboard(componentName);
-      Message.success(
-        `${
-          locale.value === 'zh-CN' ? '复制成功：' : 'Copy Success: '
-        }${componentName}`
-      );
+      // clipboard(componentName);
+      // Message.success(
+      //   `${
+      //     locale.value === 'zh-CN' ? '复制成功：' : 'Copy Success: '
+      //   }${componentName}`
+      // );
     };
 
     return {
-      icons,
+      // icons,
       t,
       locale,
       data,

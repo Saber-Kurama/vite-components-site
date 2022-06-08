@@ -11,8 +11,8 @@ Arco图标是一个独立的库，需要额外引入并注册使用。
 ```ts
 import { createApp } from 'vue'
 import ArcoVue from '@arco-design/web-vue';
-// 额外引入图标库
-import ArcoVueIcon from '@arco-design/web-vue/es/icon';
+// 按需引入图标库
+import {} from '@dangojs/digitforce-icons-vue';
 import App from './App.vue';
 import '@arco-design/web-vue/dist/arco.css';
 

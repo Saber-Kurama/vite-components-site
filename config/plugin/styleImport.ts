@@ -1,7 +1,7 @@
 /*
  * @Author: saber
  * @Date: 2022-04-18 15:01:38
- * @LastEditTime: 2022-05-12 17:15:43
+ * @LastEditTime: 2022-05-24 09:57:23
  * @LastEditors: saber
  * @Description:
  */
@@ -87,7 +87,7 @@ const arcoLibs = {
   },
 };
 export default function configStyleImportPlugin() {
-  console.log('dongojsLibs', dongojsLibs);
+  // console.log('dongojsLibs', dongojsLibs);
   const styleImportPlugin = createStyleImportPlugin({
     libs: [...dongojsLibs],
   });
