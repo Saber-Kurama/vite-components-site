@@ -29,7 +29,7 @@
     "@dangojs/digitforce-icons-vue": "^0.0.9",
     "@dangojs/portal-navbar": "^0.0.11",
     "@dangojs/a-query-header": "^0.0.16",
-    "@dangojs/a-query-table": "^0.0.9",
+    "@dangojs/a-query-table": "^0.0.10",
     "@dangojs/a-page-container": "^0.0.7",
     "@dangojs/a-transfer-tree": "^0.0.4",
     "@types/nprogress": "^0.2.0",
