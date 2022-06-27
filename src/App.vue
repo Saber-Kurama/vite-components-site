@@ -80,7 +80,7 @@ export default defineComponent({
     const path = computed(() => route.path);
     const page = computed(() => {
       const match = route.path.match(/\/(\w+)/);
-      return match?.[1] ?? 'home';
+      return match?.[1] ?? 'components';
     });
     const showNav = ref(true);
     const showAnchor = ref(true);

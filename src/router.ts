@@ -4,6 +4,7 @@ import nProgress from 'nprogress';
 const Start = () => import('./docs/start.zh-CN.md');
 const StartEn = () => import('./docs/start.en-US.md');
 const Icon = () => import('./pages/icon/icon-demo.vue');
+const Token = () => import('./pages/token/token.vue')
 const PortalNavbar = import('@dangojs/portal-navbar/docs/README.md');
 const QueryHeader = import('@dangojs/a-query-header/docs/README.md');
 const QueryTable = import('@dangojs/a-query-table/docs/README.md');
@@ -17,10 +18,23 @@ const DigitmCli = import('./docs/plugins/cli/digitm.zh-CN.md');
 
 const docs = [
   {
-    name: 'start',
-    component: Start,
-    componentEn: StartEn,
+    name: 'coding',
+    list: [
+      {
+        name: 'start',
+        component: Start,
+      },
+      {
+        name: 'token',
+        component: Token,
+      },
+    ],
   },
+  // {
+  //   name: 'start',
+  //   component: Start,
+  //   componentEn: StartEn,
+  // },
   // {
   //   name: 'dark',
   //   component: Dark,
@@ -202,24 +216,42 @@ interface ComponentMenuGroup {
 
 const routes: RouteRecordRaw[] = [];
 
-const docsMenu = [];
-for (const item of docs) {
-  const path = `/vue/docs/${toKebabCase(item.name)}`;
-  routes.push(
-    {
+const docsMenu: any[] = [];
+for (const group of docs) {
+  const menuGroup: ComponentMenuGroup = {
+    name: group.name,
+    list: [],
+  };
+  for (const item of group.list) {
+    const path = `/docs/${toKebabCase(item.name)}`;
+    routes.push({
       path,
       component: item.component,
-    },
-    {
-      path: `/vue/en-US/docs/${toKebabCase(item.name)}`,
-      component: item.componentEn ?? item.component,
-    }
-  );
-  docsMenu.push({
-    name: item.name,
-    path,
-  });
+    });
+    menuGroup.list.push({
+      name: item.name,
+      path,
+    });
+  }
+  docsMenu.push(menuGroup);
 }
+// for (const group of docs) {
+//   const path = `/docs/${toKebabCase(item.name)}`;
+//   routes.push(
+//     {
+//       path,
+//       component: item.component,
+//     },
+//     {
+//       path: `/vue/en-US/docs/${toKebabCase(item.name)}`,
+//       component: item.componentEn ?? item.component,
+//     }
+//   );
+//   docsMenu.push({
+//     name: item.name,
+//     path,
+//   });
+// }
 
 const componentMenu: ComponentMenuGroup[] = [];
 for (const group of components) {
@@ -284,13 +316,14 @@ for (const group of plugins) {
 }
 
 // Add redirects for unmatched routes at the end
+routes.push({ path: '/docs', redirect: '/docs/start' });
 routes.push({ path: '/components', redirect: '/components/portal-navbar' });
 routes.push({ path: '/zoologys', redirect: '/zoologys/vue3-transitions' });
 routes.push({ path: '/plugins', redirect: '/plugins/digitm' });
-// routes.push({
-//   path: '/:pathMatch(.*)*',
-//   redirect: '/components/portal-navbar',
-// });
+routes.push({
+  path: '/:pathMatch(.*)*',
+  redirect: '/components/portal-navbar',
+});
 
 nProgress.configure({ minimum: 0.4, showSpinner: false });
 

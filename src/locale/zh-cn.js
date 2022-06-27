@@ -4,11 +4,13 @@ export default {
     start: '快速上手',
     dark: '暗黑模式',
     theme: '定制主题',
+    token: '设计变量',
     i18n: '国际化',
     changelog: '更新日志',
   },
   group: {
     common: '通用',
+    coding: '开发指南',
     layout: '布局',
     dataDisplay: '数据展示',
     dataEntry: '数据输入',

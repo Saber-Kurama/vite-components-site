@@ -48,11 +48,7 @@
 
         <div class="aside-nav-group">
           <!-- <div class="aside-nav-group-name">{{ t('component.name') }}</div> -->
-          <div
-            v-for="group of menus"
-            :key="group.name"
-            class="aside-nav-group"
-          >
+          <div v-for="group of menus" :key="group.name" class="aside-nav-group">
             <h4 class="aside-nav-component-group-name">
               {{ t(`group.${group.name}`) }}
             </h4>
@@ -105,15 +101,21 @@
 <script lang="ts">
 import { computed, defineComponent, inject, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { componentMenu, docsMenuList, zoologysMenu, pluginsMenu } from '../../router';
+import {
+  componentMenu,
+  docsMenuList,
+  docsMenu,
+  zoologysMenu,
+  pluginsMenu,
+} from '../../router';
 import { CollapseContext, collapseInjectionKey } from '../../context';
 // todo: 后续调整统一配置
 const menusConfig = {
-  'components': componentMenu,
-  'zoologys': zoologysMenu,
-  'plugins': pluginsMenu 
-}
-
+  components: componentMenu,
+  zoologys: zoologysMenu,
+  plugins: pluginsMenu,
+  docs: docsMenu,
+};
 
 export default defineComponent({
   name: 'AsideNav',
@@ -128,13 +130,13 @@ export default defineComponent({
     const collapseCtx = inject<CollapseContext>(collapseInjectionKey);
     const { t, locale } = useI18n();
     const showNav = ref(true);
-    const menus:any = computed(() => {
+    const menus: any = computed(() => {
       // @ts-ignore
-      return menusConfig[collapseCtx.page] || componentMenu 
+      return menusConfig[collapseCtx.page] || componentMenu;
     });
     const page = computed(() => {
-      return collapseCtx?.page || 'components'
-    })
+      return collapseCtx?.page || 'components';
+    });
 
     const handleTranslationStart = () => {
       if (props.show) {
@@ -165,7 +167,7 @@ export default defineComponent({
       handleTranslationStart,
       handleTranslationEnd,
       menus,
-      page: page
+      page: page,
     };
   },
 });
