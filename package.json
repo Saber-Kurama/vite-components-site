@@ -26,6 +26,7 @@
     "@arco-design/arco-vue-scripts": "^0.2.9",
     "@arco-design/vite-plugin-arco-vue-docs": "^0.1.0",
     "@arco-design/web-vue": "^2.32.0",
+    "@arco-themes/vue-digitforce": "^0.0.28",
     "@dangojs/digitforce-icons-vue": "^0.0.10",
     "@dangojs/portal-navbar": "^0.0.15",
     "@dangojs/a-query-header": "^0.0.16",

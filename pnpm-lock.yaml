@@ -4,6 +4,7 @@ specifiers:
   '@arco-design/arco-vue-scripts': ^0.2.9
   '@arco-design/vite-plugin-arco-vue-docs': ^0.1.0
   '@arco-design/web-vue': ^2.32.0
+  '@arco-themes/vue-digitforce': ^0.0.28
   '@dangojs/a-page-container': ^0.0.10
   '@dangojs/a-query-header': ^0.0.16
   '@dangojs/a-query-table': ^0.0.11
@@ -50,6 +51,7 @@ devDependencies:
   '@arco-design/arco-vue-scripts': 0.2.9_eslint@8.18.0+vue@3.2.37
   '@arco-design/vite-plugin-arco-vue-docs': 0.1.0_vite@2.9.13
   '@arco-design/web-vue': 2.32.0_vue@3.2.37
+  '@arco-themes/vue-digitforce': 0.0.28_@arco-design+web-vue@2.32.0
   '@dangojs/a-page-container': 0.0.10_f9b9d982b6dc0de5531acbab2b5d6c28
   '@dangojs/a-query-header': 0.0.16_vue@3.2.37
   '@dangojs/a-query-table': 0.0.11_f9b9d982b6dc0de5531acbab2b5d6c28
@@ -200,6 +202,14 @@ packages:
       resize-observer-polyfill: 1.5.1
       scroll-into-view-if-needed: 2.2.29
       vue: 3.2.37
+    dev: true
+
+  /@arco-themes/vue-digitforce/0.0.28_@arco-design+web-vue@2.32.0:
+    resolution: {integrity: sha512-huupvOBxbnfjFuh+GtmB3uharM3FgtlT0QEXB9DmIAzpkqgcfFmYLpaKk+EvNMefEkMktd9CEdtEhPkx5Z1WEQ==}
+    peerDependencies:
+      '@arco-design/web-vue': ^2.32.0
+    dependencies:
+      '@arco-design/web-vue': 2.32.0_vue@3.2.37
     dev: true
 
   /@babel/code-frame/7.16.7:
