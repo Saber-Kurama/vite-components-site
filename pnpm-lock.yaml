@@ -5,6 +5,8 @@ specifiers:
   '@arco-design/vite-plugin-arco-vue-docs': ^0.1.0
   '@arco-design/web-vue': ^2.32.0
   '@arco-themes/vue-digitforce': ^0.0.28
+  '@dangojs/a-dashboard-card': ^0.0.4
+  '@dangojs/a-dashboard-page': ^0.0.4
   '@dangojs/a-page-container': ^0.0.10
   '@dangojs/a-query-header': ^0.0.16
   '@dangojs/a-query-table': ^0.0.11
@@ -52,6 +54,8 @@ devDependencies:
   '@arco-design/vite-plugin-arco-vue-docs': 0.1.0_vite@2.9.13
   '@arco-design/web-vue': 2.32.0_vue@3.2.37
   '@arco-themes/vue-digitforce': 0.0.28_@arco-design+web-vue@2.32.0
+  '@dangojs/a-dashboard-card': 0.0.4_f9b9d982b6dc0de5531acbab2b5d6c28
+  '@dangojs/a-dashboard-page': 0.0.4_f9b9d982b6dc0de5531acbab2b5d6c28
   '@dangojs/a-page-container': 0.0.10_f9b9d982b6dc0de5531acbab2b5d6c28
   '@dangojs/a-query-header': 0.0.16_vue@3.2.37
   '@dangojs/a-query-table': 0.0.11_f9b9d982b6dc0de5531acbab2b5d6c28
@@ -1430,6 +1434,27 @@ packages:
     dependencies:
       postcss: 8.4.14
       postcss-selector-parser: 6.0.10
+    dev: true
+
+  /@dangojs/a-dashboard-card/0.0.4_f9b9d982b6dc0de5531acbab2b5d6c28:
+    resolution: {integrity: sha512-C41yLF2PuH2zs3ShgEvULAOts20fW7wC9GBrRdtQL6gVOk1TMLqZZWbtbHgXjVN0yCo+1aEEgXTEWzm4vyNs6A==}
+    peerDependencies:
+      '@arco-design/web-vue': ^2.19.0
+      vue: ^3.2.0
+    dependencies:
+      '@arco-design/web-vue': 2.32.0_vue@3.2.37
+      vue: 3.2.37
+    dev: true
+
+  /@dangojs/a-dashboard-page/0.0.4_f9b9d982b6dc0de5531acbab2b5d6c28:
+    resolution: {integrity: sha512-R1+RKbYur92wB2165GazC9+speJvokVnZJETDgC9ot54HVRYaVMg7cvBPXoOAzf28KjjzCjT+a8zwYTFU268BA==}
+    peerDependencies:
+      '@arco-design/web-vue': ^2.19.0
+      vue: ^3.2.0
+    dependencies:
+      '@arco-design/web-vue': 2.32.0_vue@3.2.37
+      '@dangojs/a-dashboard-card': 0.0.4_f9b9d982b6dc0de5531acbab2b5d6c28
+      vue: 3.2.37
     dev: true
 
   /@dangojs/a-page-container/0.0.10_f9b9d982b6dc0de5531acbab2b5d6c28:

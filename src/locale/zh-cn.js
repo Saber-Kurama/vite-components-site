@@ -31,6 +31,7 @@ export default {
     queryTable: '查询表格 QueryTable',
     pageContainer: '页面容器 pageContainer',
     transferTree: '树穿梭框 transferTree',
+    dashboardCard: '可视化卡片DashboardCard',
     // 穿梭框
     icon: '图标 Icon',
     button: '按钮 Button',
