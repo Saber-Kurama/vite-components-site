@@ -33,30 +33,6 @@ const docs = [
       },
     ],
   },
-  // {
-  //   name: 'start',
-  //   component: Start,
-  //   componentEn: StartEn,
-  // },
-  // {
-  //   name: 'dark',
-  //   component: Dark,
-  //   componentEn: DarkEn,
-  // },
-  // {
-  //   name: 'theme',
-  //   component: Theme,
-  //   componentEn: ThemeEn,
-  // },
-  // {
-  //   name: 'i18n',
-  //   component: I18n,
-  //   componentEn: I18nEn,
-  // },
-  // {
-  //   name: 'changelog',
-  //   component: Changelog,
-  // },
 ];
 
 const components = [
@@ -211,6 +187,18 @@ const plugins = [
   },
 ];
 
+const solutionList = [
+  {
+    name: 'theme',
+    list: [
+      {
+        name: 'css',
+        component: () => NoDoc,
+      },
+    ],
+  }
+];
+
 function toKebabCase(string: string) {
   return string.replace(/[A-Z]+/g, (match, offset) => {
     return `${offset > 0 ? '-' : ''}${match.toLocaleLowerCase()}`;
@@ -326,11 +314,32 @@ for (const group of plugins) {
   pluginsMenu.push(menuGroup);
 }
 
+// 解决方案
+const solutionMenu: ComponentMenuGroup[] = [];
+for (const group of solutionList) {
+  const menuGroup: ComponentMenuGroup = {
+    name: group.name,
+    list: [],
+  };
+  for (const item of group.list) {
+    const path = `/solution/${toKebabCase(item.name)}`;
+    routes.push({
+      path,
+      component: item.component,
+    });
+    menuGroup.list.push({
+      name: item.name,
+      path,
+    });
+  }
+  solutionMenu.push(menuGroup);
+}
 // Add redirects for unmatched routes at the end
 routes.push({ path: '/docs', redirect: '/docs/start' });
 routes.push({ path: '/components', redirect: '/components/portal-navbar' });
 routes.push({ path: '/zoologys', redirect: '/zoologys/vue3-transitions' });
 routes.push({ path: '/plugins', redirect: '/plugins/digitm' });
+routes.push({ path: '/solution', redirect: '/solution/css' });
 routes.push({
   path: '/:pathMatch(.*)*',
   redirect: '/components/portal-navbar',
@@ -364,5 +373,5 @@ const docsMenuList = [
   },
 ];
 
-export { docsMenu, componentMenu, docsMenuList, zoologysMenu, pluginsMenu };
+export { docsMenu, componentMenu, docsMenuList, zoologysMenu, pluginsMenu, solutionMenu };
 export default router;

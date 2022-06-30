@@ -107,6 +107,7 @@ import {
   docsMenu,
   zoologysMenu,
   pluginsMenu,
+  solutionMenu
 } from '../../router';
 import { CollapseContext, collapseInjectionKey } from '../../context';
 // todo: 后续调整统一配置
@@ -115,6 +116,7 @@ const menusConfig = {
   zoologys: zoologysMenu,
   plugins: pluginsMenu,
   docs: docsMenu,
+  solution: solutionMenu
 };
 
 export default defineComponent({

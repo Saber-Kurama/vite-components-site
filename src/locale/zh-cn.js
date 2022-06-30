@@ -22,6 +22,7 @@ export default {
     vscode: 'vscode插件',
     chrome: '浏览器插件',
     vite: 'vite插件',
+    theme: '主题'
   },
   components: {
     name: '组件',
@@ -116,6 +117,9 @@ export default {
     createApplication: '模板创建项目和组件',
     snippetsUtils: '共享代码提示',
     hinata: 'hinata',
+  },
+  solution: {
+    css: 'css变量'
   },
   footer: {
     design: '设计',

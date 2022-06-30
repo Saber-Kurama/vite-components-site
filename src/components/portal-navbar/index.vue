@@ -2,8 +2,9 @@
 // @ts-ignore
 // eslint-disable-next-line import/no-unresolved
 import PortalNavbar from '@dangojs/portal-navbar';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import router from '../../router';
+
 
 const logoMenusData = [
   {
@@ -102,7 +103,7 @@ const menusData = [
   {
     resourceCode: '5',
     resourceIcon: '#icon-xuanpinpeizhi',
-    resourceLink: '/assortment-setting',
+    resourceLink: '/solution',
     resourceName: '解决方案',
   },
 ];
@@ -124,6 +125,10 @@ const menus = ref(menusData);
 const activeMenu = ref('2');
 const tenantOptions = ref(tenantOptionsData);
 const tenant = ref('1');
+onMounted(() => {
+  const menu = menusData.find((menu) => window.location.pathname.startsWith(menu.resourceLink));
+  activeMenu.value = menu?.resourceCode || '2'
+})
 const onLogoMenuClick = (item: any) => {
   console.log('item---', item);
   logo.value = item.logo;
