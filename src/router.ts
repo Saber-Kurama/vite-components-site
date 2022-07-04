@@ -19,6 +19,7 @@ const Vue3Transitions = import('./docs/nodoc.zh-CN.md');
 
 const DigitmCli = import('./docs/plugins/cli/digitm.zh-CN.md');
 const Api2code = import('./docs/plugins/vscode/api2code.zh-CN.md');
+const CreateApplication = import('./docs/plugins/vscode/createApplication.zh-CN.md');
 
 const docs = [
   {
@@ -165,7 +166,7 @@ const plugins = [
       },
       {
         name: 'createApplication',
-        component: () => NoDoc,
+        component: () => CreateApplication,
       },
       {
         name: 'snippetsUtils',
