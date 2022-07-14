@@ -18,13 +18,14 @@ title:
     <Dashboard size="32" />
     <FileSync size="32" />
     <MenuFold size="32" />
+    <NumberGraph size="32" />
   </a-space>
 </template>
 
 <script>
-import { Fire, General, Home, Dashboard, FileSync, MenuFold  } from '@dangojs/digitforce-icons-vue';
+import { Fire, General, Home, Dashboard, FileSync, MenuFold, NumberGraph } from '@dangojs/digitforce-icons-vue';
 export default {
-  components: { Fire, General, Home, Dashboard, FileSync, MenuFold }
+  components: { Fire, General, Home, Dashboard, FileSync, MenuFold, NumberGraph }
 }
 </script>
 ```
