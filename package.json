@@ -29,6 +29,7 @@
     "@arco-themes/vue-digitforce": "^0.0.30",
     "@dangojs/digitforce-icons-vue": "^0.0.12",
     "@dangojs/portal-navbar": "^0.0.15",
+    "@dangojs/a-left-menu": "^0.0.3",
     "@dangojs/a-query-header": "^0.0.16",
     "@dangojs/a-query-table": "^0.0.11",
     "@dangojs/a-page-container": "^0.0.10",
