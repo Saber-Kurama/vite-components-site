@@ -7,6 +7,7 @@ specifiers:
   '@arco-themes/vue-digitforce': ^0.0.30
   '@dangojs/a-dashboard-card': ^0.0.4
   '@dangojs/a-dashboard-page': ^0.0.4
+  '@dangojs/a-left-menu': ^0.0.3
   '@dangojs/a-page-container': ^0.0.10
   '@dangojs/a-query-header': ^0.0.16
   '@dangojs/a-query-table': ^0.0.11
@@ -56,6 +57,7 @@ devDependencies:
   '@arco-themes/vue-digitforce': 0.0.30_@arco-design+web-vue@2.33.0
   '@dangojs/a-dashboard-card': 0.0.4_ae576a3283280163d4ace7553f5553a0
   '@dangojs/a-dashboard-page': 0.0.4_ae576a3283280163d4ace7553f5553a0
+  '@dangojs/a-left-menu': 0.0.3_ae576a3283280163d4ace7553f5553a0
   '@dangojs/a-page-container': 0.0.10_ae576a3283280163d4ace7553f5553a0
   '@dangojs/a-query-header': 0.0.16_vue@3.2.37
   '@dangojs/a-query-table': 0.0.11_ae576a3283280163d4ace7553f5553a0
@@ -1454,6 +1456,16 @@ packages:
     dependencies:
       '@arco-design/web-vue': 2.33.0_vue@3.2.37
       '@dangojs/a-dashboard-card': 0.0.4_ae576a3283280163d4ace7553f5553a0
+      vue: 3.2.37
+    dev: true
+
+  /@dangojs/a-left-menu/0.0.3_ae576a3283280163d4ace7553f5553a0:
+    resolution: {integrity: sha512-6+vHeScZApZ5Ulfs2XJWEaTbGIF+IpCdCzcAU8O8t9pxjE/jrbQ+03ci19qOZdJEjGeJ4q+89a6lVKPm7dLgDw==}
+    peerDependencies:
+      '@arco-design/web-vue': ^2.19.0
+      vue: ^3.2.0
+    dependencies:
+      '@arco-design/web-vue': 2.33.0_vue@3.2.37
       vue: 3.2.37
     dev: true
 

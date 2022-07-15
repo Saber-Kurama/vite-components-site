@@ -11,7 +11,7 @@ const QueryTable = import('@dangojs/a-query-table/docs/README.md');
 // const SaberBtn = import('@dangojs/saber-btn/docs/README.md');
 const PageContainer = import('@dangojs/a-page-container/docs/README.md');
 const DashboardCard = import('@dangojs/a-dashboard-card/docs/README.md');
-const LeftMenu = import('@dangojs/a-left-menu/docs/README.md');
+const LeftMenu = import('./pages/left-menu/docs/README.md');
 // const DashboardPage = import('@dangojs/a-dashboard-page/docs/README.md');
 const transferTree = import('@dangojs/a-transfer-tree/docs/README.md');
 // const transferTree = import('@dangojs/a-transfer-tree/docs/README.md');
@@ -49,6 +49,10 @@ const components = [
       {
         name: 'portalNavbar',
         component: () => PortalNavbar,
+      },
+      {
+        name: 'leftMenu',
+        component: () => LeftMenu,
       },
       {
         name: 'queryHeader',

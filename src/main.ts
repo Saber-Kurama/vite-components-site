@@ -6,6 +6,7 @@ import '@dangojs/a-query-header/dist/css/index.css';
 import '@dangojs/a-page-container/dist/css/index.css';
 import '@dangojs/a-transfer-tree/dist/css/index.css';
 import '@dangojs/a-dashboard-card/dist/css/index.css';
+import '@dangojs/a-left-menu/dist/css/index.css';
 // import '@dangojs/a-dashboard-page/dist/css/index.css';
 // import enUS from '@web-vue/components/locale/lang/en-us';
 import packages from '@arco-design/web-vue/package.json';

@@ -28,6 +28,7 @@ export default {
     name: '组件',
     // 组件名称
     portalNavbar: '导航栏 PortalNavbar',
+    leftMenu: '左侧菜单 LeftMenu',
     queryHeader: '查询表单 QueryHeader',
     queryTable: '查询表格 QueryTable',
     pageContainer: '页面容器 pageContainer',
