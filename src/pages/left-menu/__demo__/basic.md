@@ -10,7 +10,7 @@ title:
 
 ```vue
 <template>
-  <div style="height: 400px; width: 210px; background: #eee">
+  <div style="height: 400px; width: 210px; background: #F6F8FC">
     <Button
       :style="{
         padding: '0 12px',
