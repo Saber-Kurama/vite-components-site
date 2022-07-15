@@ -20,5 +20,19 @@ description: 用于布局的左侧菜单
 |menu-tree|菜单的树形数据|`IMenuItem[]`|`[]`|
 |menu-item-click|菜单 item 的点击事件|`(item: IMenuItem) => void`|`() => {}`|
 
+### 类型
+
+``` ts
+interface IMenuItem {
+  resourceName: string; // 资源名称 菜单的名称
+  resourceLink: string; // 菜单的路由地址
+  resourceCode?: string; // 菜单的code
+  resourcePath?: string; // resourcePath
+  resourceIcon?: string; // 菜单
+  default?: boolean;
+  childrens?: IMenuItem[]; //
+}
+```
+
 
 
