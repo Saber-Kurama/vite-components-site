@@ -25,6 +25,10 @@ export default defineConfig({
         find: 'vue-i18n',
         replacement: path.join(__dirname,'node_modules/vue-i18n/dist/vue-i18n.cjs.js'), // Resolve the i18n warning issue
       },
+      {
+        find: 'vue',
+        replacement: path.resolve(__dirname, './node_modules/vue/dist/vue.esm-bundler.js'), // compile template
+      },
     ],
   },
   plugins: [
