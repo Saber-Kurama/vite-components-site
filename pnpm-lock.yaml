@@ -7,7 +7,7 @@ specifiers:
   '@arco-themes/vue-digitforce': ^0.0.30
   '@dangojs/a-dashboard-card': ^0.0.4
   '@dangojs/a-dashboard-page': ^0.0.4
-  '@dangojs/a-graph-card': file:///Users/chenguanyin/DigitForce/vue3-arco-pro-components/packages/graph-card
+  '@dangojs/a-graph-card': ^0.0.8
   '@dangojs/a-left-menu': ^0.0.3
   '@dangojs/a-page-container': ^0.0.10
   '@dangojs/a-query-header': ^0.0.16
@@ -58,7 +58,7 @@ devDependencies:
   '@arco-themes/vue-digitforce': 0.0.30_rzq2zqw3n5uto65t5ete2eoihe
   '@dangojs/a-dashboard-card': 0.0.4_vzlwumudfaawhvfm45kt6vktua
   '@dangojs/a-dashboard-page': 0.0.4_vzlwumudfaawhvfm45kt6vktua
-  '@dangojs/a-graph-card': file:../vue3-arco-pro-components/packages/graph-card_vue@3.2.37
+  '@dangojs/a-graph-card': 0.0.8_vue@3.2.37
   '@dangojs/a-left-menu': 0.0.3_vzlwumudfaawhvfm45kt6vktua
   '@dangojs/a-page-container': 0.0.10_vzlwumudfaawhvfm45kt6vktua
   '@dangojs/a-query-header': 0.0.16_vue@3.2.37
@@ -1459,6 +1459,22 @@ packages:
       '@arco-design/web-vue': 2.33.0_vue@3.2.37
       '@dangojs/a-dashboard-card': 0.0.4_vzlwumudfaawhvfm45kt6vktua
       vue: 3.2.37
+    dev: true
+
+  /@dangojs/a-graph-card/0.0.8_vue@3.2.37:
+    resolution: {integrity: sha512-A41qxF+K/FSu+9tDdflcxyN2EWT1FUTGqtc4hqCc95AsiNliObIlEukRHonaKufQmnYlErdmyMnKXWsJGBZWeg==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@arco-design/web-vue': 2.33.0_vue@3.2.37
+      '@dangojs/digitforce-icons-vue': 0.0.12_vue@3.2.37
+      '@vueuse/core': 8.9.4_vue@3.2.37
+      echarts: 5.3.3
+      lodash: 4.17.21
+      vue: 3.2.37
+      vuedraggable: 4.1.0_vue@3.2.37
+    transitivePeerDependencies:
+      - '@vue/composition-api'
     dev: true
 
   /@dangojs/a-left-menu/0.0.3_vzlwumudfaawhvfm45kt6vktua:
@@ -10699,23 +10715,4 @@ packages:
     resolution: {integrity: sha512-8IiYdfwHj2rx0UeIGZGGU4WEVSDEdeVCaIg/fomejg1Xu6OifAL1GVzIPHg2D+MyUkbNgPWji90t0a8IDk+39w==}
     dependencies:
       tslib: 2.3.0
-    dev: true
-
-  file:../vue3-arco-pro-components/packages/graph-card_vue@3.2.37:
-    resolution: {directory: ../vue3-arco-pro-components/packages/graph-card, type: directory}
-    id: file:../vue3-arco-pro-components/packages/graph-card
-    name: '@dangojs/a-graph-card'
-    version: 0.0.7
-    peerDependencies:
-      vue: ^3.2.0
-    dependencies:
-      '@arco-design/web-vue': 2.33.0_vue@3.2.37
-      '@dangojs/digitforce-icons-vue': 0.0.12_vue@3.2.37
-      '@vueuse/core': 8.9.4_vue@3.2.37
-      echarts: 5.3.3
-      lodash: 4.17.21
-      vue: 3.2.37
-      vuedraggable: 4.1.0_vue@3.2.37
-    transitivePeerDependencies:
-      - '@vue/composition-api'
     dev: true

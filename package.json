@@ -29,7 +29,7 @@
     "@arco-themes/vue-digitforce": "^0.0.30",
     "@dangojs/a-dashboard-card": "^0.0.4",
     "@dangojs/a-dashboard-page": "^0.0.4",
-    "@dangojs/a-graph-card": "^0.0.7",
+    "@dangojs/a-graph-card": "^0.0.8",
     "@dangojs/a-left-menu": "^0.0.3",
     "@dangojs/a-page-container": "^0.0.10",
     "@dangojs/a-query-header": "^0.0.16",
