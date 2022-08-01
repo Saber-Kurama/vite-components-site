@@ -32,7 +32,125 @@ vscode 插件市场安装 该插件
 |docUrl| swagger的文档地址 | - |
 |outDir| api代码生成到文件目录 | - |
 |usingOperationId| 是否使用OperationIds生成方法名 | - |
+|excludeTags| 过滤tag下的接口生成 | [] |
+|tagPathIndex| 接口名称生成忽略的长度， 值为 "auto"或者数字。值为0表示全路径  | "auto" |
 
+
+`tagPathIndex` 特别说明
+```
+{
+	"tags": [{
+		"name": "获取枚举信息",
+		"description": "Enum Qry Facade Impl"
+	}],
+	"paths": {
+		"/dio/enum/read-mode": {
+			"get": {
+				"tags": [
+					"获取枚举信息"
+				],
+				"summary": "获取读取模式枚举信息",
+				"operationId": "getReadModeEnumUsingGET",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/Result«List«OptionDTO»»"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/dio/enum/read-policy": {
+			{
+				"get": {
+					"tags": [
+						"获取枚举信息"
+					],
+					"summary": "获取读取模式枚举信息",
+					"operationId": "getReadPolicyEnumUsingGET",
+					"responses": {
+						"200": {
+							"description": "OK",
+							"content": {
+								"*/*": {
+									"schema": {
+										"$ref": "#/components/schemas/Result«List«OptionDTO»»"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+	}
+}
+```
+
+`tagPathIndex` 值为  `auto`, 会自动计算忽略的最长路径， 例如上面的忽略 `/dio/enum`
+
+``` ts
+  /**
+   * 获取读取模式枚举信息
+   *
+   * @tags 获取枚举信息
+   * @request GET: /dio/enum/read-mode
+   */
+  getReadMode = (params: AxiosRequestConfig = {}) =>
+    http.request<defs.ResultListOptionDTO>({
+      url: `/dio/enum/read-mode`,
+      method: "GET",
+      ...params,
+    });
+
+  /**
+   * 获取读取模式枚举信息
+   *
+   * @tags 获取枚举信息
+   * @request GET: /dio/enum/read-policy
+   */
+  getReadPolicy = (params: AxiosRequestConfig = {}) =>
+    http.request<defs.ResultListOptionDTO>({
+      url: `/dio/enum/read-policy`,
+      method: "GET",
+      ...params,
+    });
+```
+
+`tagPathIndex` 值为 1,  名称的生成会忽略 `/dio `
+
+``` ts
+  /**
+   * 获取读取模式枚举信息
+   *
+   * @tags 获取枚举信息
+   * @request GET: /dio/enum/read-mode
+   */
+  getEnumReadMode = (params: AxiosRequestConfig = {}) =>
+    http.request<defs.ResultListOptionDTO>({
+      url: `/dio/enum/read-mode`,
+      method: "GET",
+      ...params,
+    });
+
+  /**
+   * 获取读取模式枚举信息
+   *
+   * @tags 获取枚举信息
+   * @request GET: /dio/enum/read-policy
+   */
+  getEnumReadPolicy = (params: AxiosRequestConfig = {}) =>
+    http.request<defs.ResultListOptionDTO>({
+      url: `/dio/enum/read-policy`,
+      method: "GET",
+      ...params,
+    });
+```
 
 ## 差异比较生成代码
 
