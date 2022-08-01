@@ -2,7 +2,7 @@ Arguments:
   /Users/saber/.nvm/versions/node/v16.14.2/bin/node /Users/saber/.node/corepack/yarn/1.22.15/bin/yarn.js
 
 PATH: 
-  /Users/saber/.rbenv/shims:/Users/saber/.rbenv/bin:/Applications/Racket v8.1/bin:/Users/saber/.nvm/versions/node/v16.14.2/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/saber/.cargo/bin:/Users/saber/.rvm/bin:/usr/local/mysql/bin
+  /Users/saber/.rbenv/shims:/Users/saber/.rbenv/bin:/Applications/Racket v8.1/bin:/Users/saber/.nvm/versions/node/v16.14.2/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/saber/.rbenv/shims:/Users/saber/.rbenv/bin:/Applications/Racket v8.1/bin:/Users/saber/.nvm/versions/node/v16.14.2/bin:/usr/local/sbin:/Users/saber/.cargo/bin:/Users/saber/.rvm/bin:/usr/local/mysql/bin:/Users/saber/.rvm/bin:/usr/local/mysql/bin
 
 Yarn version: 
   1.22.15
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EEXIST: file already exists, mkdir '/Users/saber/coding/mygithub/vite-components-site/node_modules/stylelint-config-rational-order/node_modules/braces/node_modules'
+  Error: ENOENT: no such file or directory, copyfile '/Users/saber/Library/Caches/Yarn/v6/npm-cli-cursor-3.1.0-264305a7ae490d1d03bf0c9ba7c925d1753af307-integrity/node_modules/cli-cursor/index.js' -> '/Users/saber/coding/mygithub/vite-components-site/node_modules/@arco-design/arco-vue-scripts/node_modules/cli-cursor/index.js'
 
 npm manifest: 
   {
@@ -44,16 +44,18 @@ npm manifest:
     "devDependencies": {
       "@arco-design/arco-vue-scripts": "^0.2.9",
       "@arco-design/vite-plugin-arco-vue-docs": "^0.1.0",
-      "@arco-design/web-vue": "^2.32.0",
+      "@arco-design/web-vue": "^2.33.0",
       "@arco-themes/vue-digitforce": "^0.0.30",
-      "@dangojs/digitforce-icons-vue": "^0.0.12",
-      "@dangojs/portal-navbar": "^0.0.15",
+      "@dangojs/a-dashboard-card": "^0.0.4",
+      "@dangojs/a-dashboard-page": "^0.0.4",
+      "@dangojs/a-graph-card": "^0.0.8",
+      "@dangojs/a-left-menu": "^0.0.3",
+      "@dangojs/a-page-container": "^0.0.10",
       "@dangojs/a-query-header": "^0.0.16",
       "@dangojs/a-query-table": "^0.0.11",
-      "@dangojs/a-page-container": "^0.0.10",
       "@dangojs/a-transfer-tree": "^0.0.4",
-      "@dangojs/a-dashboard-page": "^0.0.4",
-      "@dangojs/a-dashboard-card": "^0.0.4",
+      "@dangojs/digitforce-icons-vue": "^0.0.12",
+      "@dangojs/portal-navbar": "^0.0.15",
       "@types/nprogress": "^0.2.0",
       "@typescript-eslint/eslint-plugin": "^5.22.0",
       "@typescript-eslint/parser": "^5.22.0",
