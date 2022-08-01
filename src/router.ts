@@ -4,13 +4,14 @@ import nProgress from 'nprogress';
 const Start = () => import('./docs/start.zh-CN.md');
 const StartEn = () => import('./docs/start.en-US.md');
 const Icon = () => import('./pages/icon/icon-demo.vue');
-const Token = () => import('./pages/token/token.vue')
+const Token = () => import('./pages/token/token.vue');
 const PortalNavbar = import('@dangojs/portal-navbar/docs/README.md');
 const QueryHeader = import('@dangojs/a-query-header/docs/README.md');
 const QueryTable = import('@dangojs/a-query-table/docs/README.md');
 // const SaberBtn = import('@dangojs/saber-btn/docs/README.md');
 const PageContainer = import('@dangojs/a-page-container/docs/README.md');
 const DashboardCard = import('@dangojs/a-dashboard-card/docs/README.md');
+const GraphCard = import('@dangojs/a-graph-card/docs/README.md');
 const LeftMenu = import('./pages/left-menu/docs/README.md');
 // const DashboardPage = import('@dangojs/a-dashboard-page/docs/README.md');
 const transferTree = import('@dangojs/a-transfer-tree/docs/README.md');
@@ -20,7 +21,9 @@ const Vue3Transitions = import('./docs/nodoc.zh-CN.md');
 
 const DigitmCli = import('./docs/plugins/cli/digitm.zh-CN.md');
 const Api2code = import('./docs/plugins/vscode/api2code.zh-CN.md');
-const CreateApplication = import('./docs/plugins/vscode/createApplication.zh-CN.md');
+const CreateApplication = import(
+  './docs/plugins/vscode/createApplication.zh-CN.md'
+);
 
 const docs = [
   {
@@ -74,6 +77,11 @@ const components = [
         name: 'dashboardCard',
         component: () => DashboardCard,
       },
+      {
+        name: 'graphCard',
+        component: () => GraphCard,
+      },
+
       // {
       //   name: 'dashboardPage',
       //   component: () => DashboardPage,
@@ -203,7 +211,7 @@ const solutionList = [
         component: () => NoDoc,
       },
     ],
-  }
+  },
 ];
 
 function toKebabCase(string: string) {
@@ -380,5 +388,12 @@ const docsMenuList = [
   },
 ];
 
-export { docsMenu, componentMenu, docsMenuList, zoologysMenu, pluginsMenu, solutionMenu };
+export {
+  docsMenu,
+  componentMenu,
+  docsMenuList,
+  zoologysMenu,
+  pluginsMenu,
+  solutionMenu,
+};
 export default router;

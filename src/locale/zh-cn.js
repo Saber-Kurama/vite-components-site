@@ -22,7 +22,7 @@ export default {
     vscode: 'vscode插件',
     chrome: '浏览器插件',
     vite: 'vite插件',
-    theme: '主题'
+    theme: '主题',
   },
   components: {
     name: '组件',
@@ -33,7 +33,8 @@ export default {
     queryTable: '查询表格 QueryTable',
     pageContainer: '页面容器 pageContainer',
     transferTree: '树穿梭框 transferTree',
-    dashboardCard: '可视化卡片DashboardCard',
+    dashboardCard: '可视化卡片 DashboardCard',
+    graphCard: '拖拽卡片 GraphCard',
     // 穿梭框
     icon: '图标 Icon',
     button: '按钮 Button',
@@ -120,7 +121,7 @@ export default {
     hinata: 'hinata',
   },
   solution: {
-    css: 'css变量'
+    css: 'css变量',
   },
   footer: {
     design: '设计',
